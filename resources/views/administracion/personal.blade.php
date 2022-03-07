@@ -12,7 +12,7 @@
         <div class="modal-content px-3 pb-0">
             <div class="modal-header row d-inline ml-2">
                 <button type="button" class="close mt-1 mr-1 p-0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title text-center ml-4">Agregar nueva persona</h4>
+                <h4 class="modal-title text-center ml-4">Ingrese Correctamente Los Datos</h4>
             </div>
             <div class="modal-body text-center">
                 <form class="form-horizontal" role="form" method="POST" action="{{route('personal-store')}}" enctype="multipart/form-data"  id="form-nuevo">
@@ -37,14 +37,14 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="titulo" class="col-2">Destacamento</label>
+                        <label for="titulo" class="col-3">Destacamento</label>
                         <select class="form-control col" name="nombre" id="destacamentos"
                         style=" text-transform: uppercase;">
                         </select>
                     </div>
 
                     <div class="form-group row">
-                        <label for="titulo" class="col-2">Compañia</label>
+                        <label for="titulo" class="col-3">Compañía</label>
                         <select class="form-control col" name="nombre" id="companias"
                         style=" text-transform: uppercase;">
                         </select>
@@ -78,7 +78,7 @@
                 {{$success = Session::get('success')}}
                 @if ($success)
                     <div class="alert alert-success">
-                        <strong>!!Felicidades!!</strong>Se Creo el Personal Correctamente <br><br>
+                        <strong>!!Felicidades!!</strong>Se Creó el Personal Correctamente <br><br>
                     </div>
                 @endif
             </div>
@@ -95,7 +95,7 @@
                     <h3  class="d-inline">Listado Del Personal</h3>
                     <button class="d-inline btn btn-info shadow float-right" id="btn-creacion" 
                         data-toggle="modal" data-target="#creacion" name="Agregar Producto">
-                        Nueva Persona
+                        Agregar Persona
                     </button>
                 </div>
                 <div class="tab-pane fade show active" id="custom-tabs-four-corE" role="tabpanel" aria-labelledby="custom-tabs-four-corE-tab" style="margin:10px">
@@ -112,6 +112,8 @@
                                 <th>Nombres</th>
                                 <th>Apellidos</th>
                                 <th>Dependencia</th>
+                                <th>Destacamento</th>
+                                <th>Compañía</th>
                                 <th>Grado</th>
                                 <th>Teléfono</th>
                                 <th>Acciones</th>
@@ -124,6 +126,8 @@
                                 <td>{{ $personal->nombres }}</td>
                                 <td>{{ $personal->apellidos }}</td>
                                 <td>{{ $personal->dependencia }}</td>
+                                <td>{{ $personal->destacamento }}</td>
+                                <td>{{ $personal->compañia }}</td>
                                 <td>{{ $personal->grado }}</td>
                                 <td>{{ $personal->telefono }}</td>
                                 <td>
