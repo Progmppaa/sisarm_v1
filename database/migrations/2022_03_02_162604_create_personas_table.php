@@ -21,6 +21,8 @@ class CreatePersonasTable extends Migration
             $table->string('apellidos')->required();
             $table->string('grado')->nullable();
             $table->string('dependencia')->required();
+            $table->string('destacamento')->required();
+            $table->string('compania')->required();
             $table->bigInteger('telefono')->nullable();
 
             $table->timestamps();

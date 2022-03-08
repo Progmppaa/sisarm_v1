@@ -36,7 +36,7 @@
                 <section class="content mr-5 ml-5">
                     @if ($message = Session::get('success'))
                     <div id="toastsContainerTopRight" class="alert toasts-top-right fixed mt-2 mr-2">
-                        <div class="toast bg-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast bg-info fade show" role="alert" aria-live="assertive" aria-atomic="true">
                             <div class="toast-header">
                                 <strong class="mr-auto">Completado</strong>
                                 <small></small>

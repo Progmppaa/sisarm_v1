@@ -16,22 +16,22 @@ class CreateMovimientoDeMaterialsTable extends Migration
         Schema::create('movimiento_de_materials', function (Blueprint $table) {
             $table->id();
             // Verificar Campos
-            $table->string('nro_doc')->nullable();
-            $table->date('fecha_doc')->nullable();
-            $table->string('remitente')->nullable();
-            $table->string('destinatario')->nullable();
-            $table->string('asunto')->nullable();
-            $table->string('armas')->nullable();
-            $table->string('serial')->nullable();
-            $table->string('cargadores')->nullable();
-            $table->string('cartucho')->nullable();
-            $table->integer('cant_solicitada_armas')->nullable();
-            $table->integer('cant_solicitada_cargadores')->nullable();
-            $table->integer('cant_solicitada_cartuchos')->nullable();
-            $table->integer('cant_auto_armas')->nullable();
-            $table->integer('cant_auto_cargadores')->nullable();
-            $table->integer('cant_auto_cartuchos')->nullable();
-            $table->string('notas')->nullable();
+            // $table->string('nro_doc')->required();
+            // $table->date('fecha_doc')->required();
+            $table->string('remitente')->required();
+            $table->string('destinatario')->required();
+            $table->string('asunto')->required();
+            $table->string('armas')->required();
+            $table->string('serial')->required();
+            $table->string('cargadores')->required();
+            $table->string('cartucho')->required();
+            // $table->integer('cant_solicitada_armas')->required();
+            // $table->integer('cant_solicitada_cargadores')->required();
+            // $table->integer('cant_solicitada_cartuchos')->required();
+            // $table->integer('cant_auto_armas')->required();
+            // $table->integer('cant_auto_cargadores')->required();
+            // $table->integer('cant_auto_cartuchos')->required();
+            // $table->string('notas')->required();
             
             $table->timestamps();
         });

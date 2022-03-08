@@ -41,9 +41,9 @@ class DestacamentoController extends Controller
                 'id_comando'  => 'required'
             ]);
             Destacamento::create($request->all());
-            return redirect('dependencias')->with('success', 'Los datos se han registrado corretamente.');
+            return redirect('/extras/dependencias')->with('success', 'Los datos se han registrado corretamente.');
         } catch (\Throwable $th) {
-            return redirect('dependencias')->with('error', "Error al intentar registrar, verifique los datos e intente nuevamente.");
+            return redirect('/extras/dependencias')->with('error', "Error al intentar registrar, verifique los datos e intente nuevamente.");
         }
     }
 

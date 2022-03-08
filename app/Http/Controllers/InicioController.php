@@ -7,6 +7,8 @@ use App\Models\OrdenPublico;
 use App\Models\Optronicos;
 use Illuminate\Http\Request;
 
+
+
 class InicioController extends Controller
 
 
@@ -39,7 +41,7 @@ class InicioController extends Controller
         
         foreach ($mncs as $municion) {
            
-            if ($municion->modelo !=null) {
+            if ($municion->personas !=null) {
             
             $MuniAsig++;
             } else {
@@ -51,7 +53,7 @@ class InicioController extends Controller
         
         foreach ($ordenp as $orden) {
            
-            if ($orden->modelo !=null) {
+            if ($orden->personas !=null) {
             
             $OrPuAsig++;
             } else {
@@ -63,7 +65,7 @@ class InicioController extends Controller
         
         foreach ($optronicos as $optronico) {
            
-            if ($optronico->modelo !=null) {
+            if ($optronico->personas !=null) {
             
             $OptiYOptroAsig++;
             } else {
@@ -75,3 +77,4 @@ class InicioController extends Controller
     }
 
 }
+

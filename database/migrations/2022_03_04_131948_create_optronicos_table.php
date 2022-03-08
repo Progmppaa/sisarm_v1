@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateOptronicosTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('optronicos', function (Blueprint $table) {
@@ -21,11 +17,6 @@ class CreateOptronicosTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('optronicos');

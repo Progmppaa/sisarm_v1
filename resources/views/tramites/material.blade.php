@@ -109,16 +109,18 @@
                                         <a class="col-md-1 p-2" onclick="aggProd();">
                                             <span class="btn btn-primary"><i class="fas fa-plus"></i></span>
                                         </a>
-                                    </div>
-                                </div>
-                            </div>
+                                    
+                        <div class="row form-group ">
+                            
+                            <label class="col-4">Cargadores</label>
+                            <input type="number" name="cargadores[]" min="1" class="form-control col-1" placeholder="1" required>
+                            <label class="col-4">Cartuchos</label>
+                            <input type="number" name="cartuchos[]" min="1" class="form-control col-1" placeholder="1" required>
                         </div>
-                        <div class="row form-group">
-                            <label for="cargadores" class="col-2">Cargadores</label>
-                            <input type="number" name="cargadores" min="1" class="form-control col-4" placeholder="01" style="text-transform: uppercase;" required>
-                            <label for="cartuchos" class="col-2">Cartuchos</label>
-                            <input type="number" name="cartuchos" min="1" class="form-control col-4" placeholder="01" style="text-transform: uppercase;" required>
-                        </div>
+                    </div>
+                </div>
+                </div>
+                    </div>
                         <div class="modal-footer row my-3 pt-3">
                             <div class="col">
                                 <button type="submit" class="btn btn-primary" id="btn-nuevo">

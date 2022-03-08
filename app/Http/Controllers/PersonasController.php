@@ -26,17 +26,36 @@ class PersonasController extends Controller
 
     public function store(Request $request)
     {
+        try {
         request()->validate([
-            'CI'  => 'required',
-            'nombres'  => 'required',
-            'apellidos'   => 'required',
+            'nombres' => 'required',
+            'apellidos' => 'required',
             'grado' => 'required',
-            'dependencia'  => 'required',
-            'telefono'  => 'required',
+            'dependencia' => 'required',
+            'destacamento' => 'required',
+            'compania' => 'required',
+            'telefono' => 'required',
+
         ]);
         Personas::create($request->all());
-        return redirect('personal');
+
+        // $Personal = new Personas();
+        // $Personal->CI = $request->CI;
+        // $Personal->nombres = $request->nombres;
+        // $Personal->apellidos = $request->apellidos;
+        // $Personal->grado = $request->grado;
+        // $Personal->dependencia = $request->dependencia;
+        // $Personal->destacamento = $request->destacamento;
+        // $Personal->compania = $request->compania;
+        // $Personal->telefono = $request->telefono;
+      
+        // $Personal->save();
+    
+        return redirect('/administracion/personal')->with('success', 'Los datos se han registrado corretamente.');
+    } catch (\Throwable $th) {
+        return redirect('/administracion/personal')->with('error', "Error al intentar registrar, verifique los datos e intente nuevamente.");    
     }
+}
 
 
     public function show(Personas $personas)
@@ -56,8 +75,10 @@ class PersonasController extends Controller
         //
     }
 
-    public function destroy(Personas $personas)
+    public function destroy($id)
     {
-        //
+        $personal = Personas::find($id);
+        $personal->delete();
+        return redirect('/administracion/personal');
     }
 }

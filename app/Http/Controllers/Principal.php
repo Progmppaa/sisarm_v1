@@ -7,6 +7,7 @@ use App\Models\Destacamento;
 use App\Models\Compania;
 use App\Models\Armas;
 use App\Models\Personas;
+use App\Models\Estados;
 use Illuminate\Http\Request;
 
 class Principal extends Controller
@@ -25,8 +26,9 @@ class Principal extends Controller
         $comandos = ComandoDeZona::get();
         $destacamentos = Destacamento::get();
         $companias = Compania::get();
+        $estado = Estados::get();
 
-        return view ('/administracion/dependencias', compact('comandos','destacamentos','companias'));
+        return view ('/administracion/dependencias', compact('comandos','destacamentos','companias', 'estado'));
     }
     public function armas()
     {

@@ -19,26 +19,37 @@ class PersonalSeeder extends Seeder
             'nombres'=>'Yulimar',
             'apellidos'=>'Dominguez',
             'grado'=>'sargento',
-            'dependencia'=>'ni idea',
-            'telefono'=>'02124401789',]);
+            'dependencia'=>'comando',
+            'destacamento'=>'DA-1',
+            'compania'=>'guaro',
+            'telefono'=>'02124401789',
+        ]);
         Personas::create([
             'CI'=>'23333333', 
             'nombres'=>'Pedro',
             'apellidos'=>'Alvarez',
-            'dependencia'=>'no disponible',
-            'telefono'=>'02464401789'
+            'dependencia'=>'comando',
+            'destacamento'=>'DA-1',
+            'compania'=>'guaro',
+            'telefono'=>'02124401789',
             ]);
         Personas::create([
             'CI'=>'24444444', 
             'nombres'=>'Gabriela',
             'apellidos'=>'Sandia',
-            'dependencia'=>'no disponible'
+            'dependencia'=>'comando',
+            'destacamento'=>'DA-1',
+            'compania'=>'guaro',
+            'telefono'=>'02124401789',
             ]);
         Personas::create([
             'CI'=>'25555555', 
             'nombres'=>'Gabriel',
             'apellidos'=>'Gonzalez',
-            'dependencia'=>'no disponible'
+            'dependencia'=>'comando',
+            'destacamento'=>'DA-1',
+            'compania'=>'guaro',
+            'telefono'=>'02124401789',
         ]);
     }
 }

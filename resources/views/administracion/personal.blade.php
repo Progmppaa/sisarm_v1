@@ -8,57 +8,71 @@
 @section('contenido')
 {{--  Modal Agregar personal --}}
 <div class="modal fade" id="creacion" tabindex="-1" role="dialog" aria-labelledby="creacionLabel">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content px-3 pb-0">
             <div class="modal-header row d-inline ml-2">
                 <button type="button" class="close mt-1 mr-1 p-0" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title text-center ml-4">Ingrese Correctamente Los Datos</h4>
+                <h4 class="modal-title text-center ml-4">Agregar nueva persona</h4>
             </div>
             <div class="modal-body text-center">
                 <form class="form-horizontal" role="form" method="POST" action="{{route('personal-store')}}" enctype="multipart/form-data"  id="form-nuevo">
                     @csrf
                     <div class="form-group row">
-                        <label for="titulo" class="col-3">CI</label>
+                        <label  class="col-3">CI</label>
                         <input type="text" name="CI" class="form-control col">
                     </div>
                     <div class="form-group row">
-                        <label for="titulo" class="col-3">Nombres</label>
+                        <label  class="col-3">Nombres</label>
                         <input type="text" name="nombres" class="form-control col">
                     </div>
                     <div class="form-group row">
-                        <label for="titulo" class="col-3">Apellidos</label>
+                        <label class="col-3">Apellidos</label>
                         <input type="text" name="apellidos" class="form-control col">
                     </div>
                     <div class="form-group row">
-                        <label for="dependencia" class="d-inline col-3">Dependencia</label>
-                        <select class="form-control col" name="dependencia" id="dependencias"
+                        <label  class="col-3">Dependencia</label>
+                        <select class="form-control col" name="dependencia" id="dependencias" onchange="mDestacamento(this.value);"
                         style=" text-transform: uppercase;">
                      </select>
                     </div>
-
-                    <div class="form-group row">
-                        <label for="titulo" class="col-3">Destacamento</label>
-                        <select class="form-control col" name="nombre" id="destacamentos"
+                    {{-- <div class="form-group row">
+                        <label  class="col-3">¿Pertenece a un destacameto?</label>
+                        <select class="form-control col" onchange="mDestacamento(this.value);"
+                        style=" text-transform: uppercase;"><option value="0" selected disabled>SELECCIONE...
+                            <option value="SI">SI</option>
+                            <option value="NO">NO</option>
+                     </select> 
+                    </div>--}}
+                    <div class="form-group row" id="id_dest" style="display: none;">
+                        <label  class="col-3" >Destacamento</label>
+                        <select class="form-control col" onchange="mCompania(this.value);" name="destacamento" id="destacamentos"
                         style=" text-transform: uppercase;">
                         </select>
                     </div>
-
-                    <div class="form-group row">
-                        <label for="titulo" class="col-3">Compañía</label>
-                        <select class="form-control col" name="nombre" id="companias"
+                    {{-- <div class="form-group row">
+                        <label  class="col-3">¿Pertenece a una compañía?</label>
+                        <select class="form-control col" onchange="mCompania(this.value);"
+                        style=" text-transform: uppercase;"><option value="0" selected disabled>SELECCIONE...
+                            <option value="SI">SI</option>
+                            <option value="NO">NO</option>
+                     </select>
+                    </div> --}}
+                    <div class="form-group row" id="id_comp" style="display: none;" >
+                        <label class="col-3">Compañia</label>
+                        <select class="form-control col" name="compania" id="companias"
                         style=" text-transform: uppercase;">
                         </select>
                     </div>
                    
                     <div class="form-group row">
-                        <label for="titulo" class="d-inline col-3">Grado</label>
-                        <select class="form-control col" name="nombre" id="grados"
+                        <label class=" col-3">Grado</label>
+                        <select class="form-control col" name="grado" id="grados"
                         style=" text-transform: uppercase;">
                         </select>
                     </div>
                     
                     <div class="form-group row">
-                        <label for="telefono" class="d-inline col-3">Teléfono</label>
+                        <label class=" col-3">Teléfono</label>
                         <input type="text" name="telefono" class="form-control col">
                     </div>
                     <div class="modal-footer row my-3 pt-3">
@@ -78,7 +92,7 @@
                 {{$success = Session::get('success')}}
                 @if ($success)
                     <div class="alert alert-success">
-                        <strong>!!Felicidades!!</strong>Se Creó el Personal Correctamente <br><br>
+                        <strong>!!Felicidades!!</strong>Se Creo el Personal Correctamente <br><br>
                     </div>
                 @endif
             </div>
@@ -95,25 +109,20 @@
                     <h3  class="d-inline">Listado Del Personal</h3>
                     <button class="d-inline btn btn-info shadow float-right" id="btn-creacion" 
                         data-toggle="modal" data-target="#creacion" name="Agregar Producto">
-                        Agregar Persona
+                        Nueva Persona
                     </button>
                 </div>
-                <div class="tab-pane fade show active" id="custom-tabs-four-corE" role="tabpanel" aria-labelledby="custom-tabs-four-corE-tab" style="margin:10px">
+                <div class="tab-pane fade show active" id="custom-tabs-four-corE" style="margin:10px">
                     <div class="correspondencia_wrapper dataTables_wrapper dt-bootstrap4">
                       <div class="row">
                         <div  class="col-md-12">
-                            <table class="correspondencia table table-bordered table-striped dataTable dtr-inline" role="grid" aria-describedby="enviadosA_info">
+                            <table class="correspondencia table table-bordered table-striped dataTable dtr-inline" >
                               <thead  class="text-center text-white" style="background-color:#6A0304">
-                {{-- <div class="card-body">
-                    <table id="notas" class="table table-bordered table-striped">
-                        <thead class="text-center text-white" style="background-color:#6A0304"> --}}
                             <tr>
                                 <th>CI</th>
                                 <th>Nombres</th>
                                 <th>Apellidos</th>
                                 <th>Dependencia</th>
-                                <th>Destacamento</th>
-                                <th>Compañía</th>
                                 <th>Grado</th>
                                 <th>Teléfono</th>
                                 <th>Acciones</th>
@@ -126,20 +135,14 @@
                                 <td>{{ $personal->nombres }}</td>
                                 <td>{{ $personal->apellidos }}</td>
                                 <td>{{ $personal->dependencia }}</td>
-                                <td>{{ $personal->destacamento }}</td>
-                                <td>{{ $personal->compañia }}</td>
                                 <td>{{ $personal->grado }}</td>
                                 <td>{{ $personal->telefono }}</td>
                                 <td>
-                            <form action="{{ route('personal-destroy',$personal->id) }}" method="POST">
+                            <a href="{{ route('personal-destroy',$personal->id) }}" class="btn btn-danger" onclick="return deleteSeg();">Borrar</a>  
                             <a href="{{ route('personal-edit',$personal->id) }}" onclick="return editSeg();" class=" btn btn-info">
                             Editar
                             </a>                                  
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return deleteSeg();">Borrar</button>
-                            </form>
-                                </td>
+                            </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -180,46 +183,23 @@
         $('#btn-creacion').on('click', function() {
             event.preventDefault();
             var urlDependencia = "{{ url('/administracion/comandos_de_zona') }}";
-            //   dependencia
+
             $.get(urlDependencia, function(data, status) {
                 var $el = $("#dependencias");
                 $el.empty(); // remove old options
                 $el.append($("<option selected disabled></option>").text('SELECCIONE UN COMANDO DE ZONA'));
                 $.each(data, function(key, value) {
-                    $el.append($("<option></option>").attr("value", value.nombre).text(value.nombre));
+                    $el.append($("<option></option>").attr("value", value.id).text(value.nombre));
                 });
                 console.log(data);
             }).fail(function() {
                 console.log("Error");
             });
+            
+           
+            //
 
-            var urlDestacamento = "{{ url('/administracion/destacamentos') }}";
-            //   dependencia
-            $.get(urlDestacamento, function(data, status) {
-                var $el = $("#destacamentos");
-                $el.empty(); // remove old options
-                $el.append($("<option selected disabled></option>").text('SELECCIONE UN DESTACAMENTO'));
-                $.each(data, function(key, value) {
-                    $el.append($("<option></option>").attr("value", value.nombre).text(value.nombre));
-                });
-                console.log(data);
-            }).fail(function() {
-                console.log("Error");
-            });
-
-            var urlcompania = "{{ url('/administracion/companias') }}";
-            //   dependencia
-            $.get(urlcompania, function(data, status) {
-                var $el = $("#companias");
-                $el.empty(); // remove old options
-                $el.append($("<option selected disabled></option>").text('SELECCIONE UN COMPAÑIA'));
-                $.each(data, function(key, value) {
-                    $el.append($("<option></option>").attr("value", value.nombre).text(value.nombre));
-                });
-                console.log(data);
-            }).fail(function() {
-                console.log("Error");
-            });
+           
 
             var urlgrado = "{{ url('/grado') }}";
             //   dependencia
@@ -236,5 +216,49 @@
             });
         });
     });
+    function mDestacamento(id){ 
+      if (id){
+        $("#id_dest").show();
+        var urlDestacamento = "{{ url('/administracion/destacamentos') }}";
+            $.get(urlDestacamento, function(data, status) {
+                var $el = $("#destacamentos");
+                $el.empty(); // remove old options
+                $el.append($("<option selected disabled></option>").text('SELECCIONE UN DESTACAMENTO'));
+                $.each(data, function(key, value) {
+                    if (id == value.id_comando){
+                    $el.append($("<option></option>").attr("value", value.id).text(value.nombre));
+                    };
+                });
+                console.log(data);
+            }).fail(function() {
+                console.log("Error");
+            });
+      }else{
+        $("#id_dest").hide();
+      }
+    };
+
+    function mCompania(id){ 
+      if (id){
+        $("#id_comp").show();
+        var urlcompania = "{{ url('/administracion/companias') }}";
+            $.get(urlcompania, function(data, status) {
+                var $el = $("#companias");
+                $el.empty(); // remove old options
+                $el.append($("<option selected disabled></option>").text('SELECCIONE UNA COMPAÑIA'));
+                $.each(data, function(key, value) {
+                    if (id == value.id_destacamento){
+                    $el.append($("<option></option>").attr("value", value.id).text(value.nombre));
+                };
+                });
+                console.log(data);
+            }).fail(function() {
+                console.log("Error");
+            });
+      }else{
+        $("#id_id_comp").hide();
+      }
+    }
+
 </script>
 @endsection

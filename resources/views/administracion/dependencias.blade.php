@@ -19,15 +19,15 @@
                 <form class="form-horizontal" role="form" method="POST" action="{{route('comando-store')}}" enctype="multipart/form-data"  id="form-comando">
                     @csrf
                     <div class="form-group row">
-                        <label for="nombre" class="col-4">Nombre</label>
+                        <label class="col-4">Nombre</label>
                         <input type="text" name="nombre" placeholder="PUESTO CMDO" class="form-control col" required>
                     </div>
                     <div class="form-group row">
-                        <label for="estado" class="d-inline col-4">Estado</label>
+                        <label class="d-inline col-4">Estado</label>
                         <select class="form-control col" name="id_estado" id="estados" required></select>
                     </div>
                     <div class="form-group row">
-                        <label for="descripcion" class="d-inline col-4">Descripción</label>
+                        <label class="d-inline col-4">Descripción</label>
                         <input type="text" name="descripcion" placeholder="EDO. MAYOR" class="form-control col">
                     </div>
                     <div class="modal-footer row my-3 pt-3">
@@ -60,15 +60,15 @@
                 <form class="form-horizontal" role="form" method="POST" action="{{route('destacamento-store')}}" enctype="multipart/form-data"  id="form-destacamento">
                     @csrf
                     <div class="form-group row">
-                        <label for="nombre" class="col-4">Nombre</label>
+                        <label class="col-4">Nombre</label>
                         <input type="text" name="nombre" placeholder="DA-1" class="form-control col" required>
                     </div>
                     <div class="form-group row">
-                        <label for="comando" class="d-inline col-4">Comando de Zona</label>
+                        <label  class="d-inline col-4">Comando de Zona</label>
                         <select class="form-control col" name="id_comando" id="comandos" required></select>
                     </div>
                     <div class="form-group row">
-                        <label for="descripcion" class="d-inline col-4">Descripción</label>
+                        <label class="d-inline col-4">Descripción</label>
                         <input type="text" name="descripcion" placeholder="BOLIVAR" class="form-control col">
                     </div>
                     <div class="modal-footer row my-3 pt-3">
@@ -101,15 +101,15 @@
                 <form class="form-horizontal" role="form" method="POST" action="{{route('compania-store')}}" enctype="multipart/form-data"  id="form-compania">
                     @csrf
                     <div class="form-group row">
-                        <label for="nombre" class="col-4">Nombre</label>
+                        <label class="col-4">Nombre</label>
                         <input type="text" name="nombre" class="form-control col" placeholder="1RA. CIA" required>
                     </div>
                     <div class="form-group row">
-                        <label for="destacamento" class="d-inline col-4">Destacamento</label>
+                        <label class="d-inline col-4">Destacamento</label>
                         <select class="form-control col" name="id_destacamento" id="destacamentos" required></select>
                     </div>
                     <div class="form-group row">
-                        <label for="descripcion" class="d-inline col-4">Descripción</label>
+                        <label class="d-inline col-4">Descripción</label>
                         <input type="text" name="descripcion" class="form-control col" placeholder="SER. GENERAL">
                     </div>
                     <div class="modal-footer row my-3 pt-3">
@@ -261,8 +261,10 @@
                 var $selector = $("#comandos");
                 $selector.empty();
                 $selector.append($("<option selected disabled></option>").text('SELECCIONE UN COMANDO DE ZONA'));
-                $.each(data, function(key, value) {
+                $.each(data, function(key, value)  {
+                
                     $selector.append($("<option></option>").attr("value", value.id).text(value.nombre + ' - ' + value.descripcion));
+                
                 });
             }).fail(function() {
                 console.log("Error");
@@ -280,7 +282,9 @@
                 $selector.empty();
                 $selector.append($("<option selected disabled></option>").text('SELECCIONE UN DESTACAMENTO'));
                 $.each(data, function(key, value) {
-                    $selector.append($("<option></option>").attr("value", value.id).text(value.nombre + ' - ' + value.descripcion));
+                   
+                        $selector.append($("<option></option>").attr("value", value.id).text(value.nombre + ' - ' + value.descripcion));    
+                    
                 });
             }).fail(function() {
                 console.log("Error");
