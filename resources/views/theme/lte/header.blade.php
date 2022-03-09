@@ -16,10 +16,13 @@
   <ul class="navbar-nav ml-auto text-white">
     <form id="logout-form" action="{{ route('logout') }}" method="POST">
       @csrf
-      <a class="btn btn-transparent text-white" onclick="this.closest('form').submit();return logout();">
+      <a class="btn btn-transparent text-white" onclick="this.closest('form').submit();return logout();"style="color:rgb(116, 19, 19)">
         <i class="fas fa-sign-out-alt"></i>
+        Salir
       </a>
     </form>
-    
+    {{-- <ul  class="dropdown-menu  text-center" role="menu">
+      <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();" style="color:rgb(116, 19, 19)" >Salir</a></li>
+    </ul> --}}
   </ul>
 </nav>

@@ -17,6 +17,7 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
+                            <h6 ><a href="/inventario/personas" class="text-white-50">Asignar armamento</a></h6>
                         </div>
                         <div class="col">
                             <h3>0</h3>
@@ -39,6 +40,7 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
+                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
                         </div>
                         <div class="col">
                             <h3>0</h3>
@@ -72,7 +74,7 @@
                     <a href="" class="text-white-50">Ver Inventario</a>
                 </div>
             </div>
-        </div> --}}   
+        </div> --}}
         <div class="col">
             <div class="card h-100 text-white" style="background: rgb(135, 5, 5) !important">
                 <div class="card-header">
@@ -83,6 +85,8 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
+                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
+
                         </div>
                         <div class="col">
                             <h3>0</h3>
@@ -96,7 +100,7 @@
             </div>
         </div>
     </div>
-        <div class="row mt-4">
+    <div class="row mt-4">
         <div class="col">
             <div class="card h-100 text-white" style="background: rgb(15, 21, 46) !important">
                 <div class="card-header">
@@ -107,6 +111,8 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
+                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
+
                         </div>
                         <div class="col">
                             <h3>0</h3>
@@ -129,6 +135,8 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
+                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
+
                         </div>
                         <div class="col">
                             <h3>0</h3>
@@ -151,6 +159,8 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
+                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
+
                         </div>
                         <div class="col">
                             <h3>0</h3>
@@ -167,12 +177,12 @@
     <div class="row mt-4">
         <div class="col card mr-2">
             <div class="row-col p-2">
-                <h3 style="color: #6A0304"  class="d-inline ">Consultar Cédula</h3>
-                <form action="#" method="POST"  class="d-inline float-right">
+                <h3 style="color: #6A0304" class="d-inline ">Consultar Cédula</h3>
+                <form action="#" method="POST" class="d-inline float-right">
                     <div class="d-flex">
-                        <input type="text" name="search" class="form-control "/>
-                        <button type="submit" style= "background:#fff" class="btn">
-                        <i class="fas fa-search"></i>
+                        <input type="text" name="search" class="form-control " />
+                        <button type="submit" style="background:#fff" class="btn">
+                            <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </form>
@@ -180,12 +190,12 @@
         </div>
         <div class="col card ml-2">
             <div class="row-col p-2">
-                <h3 style="color: #6A0304"  class="d-inline ">Consultar Serial</h3>
-                <form action="#" method="POST"  class="d-inline float-right">
+                <h3 style="color: #6A0304" class="d-inline ">Consultar Serial</h3>
+                <form action="#" method="POST" class="d-inline float-right">
                     <div class="d-flex">
-                        <input type="text" name="search" class="form-control "/>
-                        <button type="submit" style= "background:#fff" class="btn">
-                        <i class="fas fa-search"></i>
+                        <input type="text" name="search" class="form-control " />
+                        <button type="submit" style="background:#fff" class="btn">
+                            <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </form>

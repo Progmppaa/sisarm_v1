@@ -67,10 +67,10 @@
                             <span class="text-white">Recordar</span>
                         </label>
                     </div>
-                    <div class="form-group text-center col-auto">
-                        <button type="submit" style="background: #3d0b0c; color:#ffff!important" class="btn ">Ingresar</button>
-                      </div>
                 </div>
+                <div class="form-group text-center col-auto">
+                    <button type="submit" style="background: #3d0b0c; color:#ffff!important" class="btn btn-dark ">Ingresar</button>
+                  </div>
             </form>
         </div>
     </div>

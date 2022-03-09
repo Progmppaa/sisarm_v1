@@ -212,6 +212,12 @@
                 <p>Asignación Dependencia</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="{{ route('material') }}" class="nav-link">
+                <i class="fa-solid fa-wifi-weak"></i> 
+                <p>Parámetros</p>
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
