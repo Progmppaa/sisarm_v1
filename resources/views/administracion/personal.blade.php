@@ -22,6 +22,10 @@
                         <input type="text" name="CI" class="form-control col">
                     </div>
                     <div class="form-group row">
+                        <label  class="col-3">Fecha de Nacimiento</label>
+                        <input type="text" name="Fe_nac" class="form-control col">
+                    </div>
+                    <div class="form-group row">
                         <label  class="col-3">Nombres</label>
                         <input type="text" name="nombres" class="form-control col">
                     </div>
@@ -35,28 +39,12 @@
                         style=" text-transform: uppercase;">
                      </select>
                     </div>
-                    {{-- <div class="form-group row">
-                        <label  class="col-3">¿Pertenece a un destacameto?</label>
-                        <select class="form-control col" onchange="mDestacamento(this.value);"
-                        style=" text-transform: uppercase;"><option value="0" selected disabled>SELECCIONE...
-                            <option value="SI">SI</option>
-                            <option value="NO">NO</option>
-                     </select> 
-                    </div>--}}
                     <div class="form-group row" id="id_dest" style="display: none;">
                         <label  class="col-3" >Destacamento</label>
                         <select class="form-control col" onchange="mCompania(this.value);" name="destacamento" id="destacamentos"
                         style=" text-transform: uppercase;">
                         </select>
                     </div>
-                    {{-- <div class="form-group row">
-                        <label  class="col-3">¿Pertenece a una compañía?</label>
-                        <select class="form-control col" onchange="mCompania(this.value);"
-                        style=" text-transform: uppercase;"><option value="0" selected disabled>SELECCIONE...
-                            <option value="SI">SI</option>
-                            <option value="NO">NO</option>
-                     </select>
-                    </div> --}}
                     <div class="form-group row" id="id_comp" style="display: none;" >
                         <label class="col-3">Compañia</label>
                         <select class="form-control col" name="compania" id="companias"
@@ -74,6 +62,14 @@
                     <div class="form-group row">
                         <label class=" col-3">Teléfono</label>
                         <input type="text" name="telefono" class="form-control col">
+                    </div>
+                    <div class="form-group row">
+                        <label class=" col-3">Nro. de carnet</label>
+                        <input type="text" name="nro_carnet" class="form-control col">
+                    </div>
+                    <div class="form-group row">
+                        <label class=" col-3">Promo</label>
+                        <input type="text" name="promo" class="form-control col">
                     </div>
                     <div class="modal-footer row my-3 pt-3">
                         <div class="col">

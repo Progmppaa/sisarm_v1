@@ -12,10 +12,13 @@ class Personas extends Model
             'CI',
             'nombres',
             'apellidos',
+            'Fe_nac',
             'grado',
             'dependencia',
             'destacamento',
             'compania',
             'telefono',
+            'nro_carnet',
+            'promo',
     ];
 }          

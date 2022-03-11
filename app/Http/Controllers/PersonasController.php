@@ -28,13 +28,17 @@ class PersonasController extends Controller
     {
         try {
         request()->validate([
+            'CI' => 'required',
             'nombres' => 'required',
             'apellidos' => 'required',
+            'Fe_nac' => 'required',
             'grado' => 'required',
             'dependencia' => 'required',
             'destacamento' => 'required',
             'compania' => 'required',
             'telefono' => 'required',
+            'nro_carnet' => 'required',
+            'promo' => 'required',
 
         ]);
         Personas::create($request->all());

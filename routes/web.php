@@ -76,5 +76,5 @@ Route::post('/inventario/explisivos/delete', [App\Http\Controllers\InventarioArm
 Auth::routes();
 
 //gráfica
-Route::get('/graficos/armas', [App\Http\Controllers\GraficosController::class, 'index'])->name('grafico-armas');
-Route::get('/graficos/DetallesArmas', [App\Http\Controllers\GraficosController::class, 'DetallesArmas'])->name('Detalles-armas');
+Route::get('/DetallesArmas', [App\Http\Controllers\GraficosController::class, 'index'])->name('Detalles-armas');
+Route::get('/graficos/DetallesArmas/{id}', [App\Http\Controllers\GraficosController::class, 'show'])->name('Detalles-armas-show');

@@ -15,7 +15,7 @@
                 <div class="card-body my-0 py-0 mt-4">
                     <div class="row">
                         <div class="col">
-                            <h3>0</h3>
+                            <h3>{{$ArmasDisp}}</h3>
                             <span>Disponible</span>
                             <h6 ><a href="/inventario/personas" class="text-white-50">Asignar armamento</a></h6>
                         </div>

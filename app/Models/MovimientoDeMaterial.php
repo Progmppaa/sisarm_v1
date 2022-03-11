@@ -9,11 +9,12 @@ class MovimientoDeMaterial extends Model
 {
     use HasFactory;
     protected $fillable = [
+        // 'nro',
+        // 'nro_doc',
         'asunto',
         'remitente',
         'destinatario',
         'armas',
-        'serial',
         'cargadores',
         'cartuchos',
     ];

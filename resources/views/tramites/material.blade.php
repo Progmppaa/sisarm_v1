@@ -60,10 +60,23 @@
                         action="{{ route('material-store') }}" enctype="multipart/form-data" id="form-nuevo">
                         @csrf
                         <div class="row">
+                        {{-- <div class="form-group">
+                                <div id="sOficio" >
+                                  <label>N° del Doc:</label>
+                                  <div class="row p-0 m-0" id="oficio">
+                                    <select class="form-control select2 col-4" name="nro_doc">
+                                      <option value="SMT" selected>SMT</option>
+                                    </select>
+                                    <input type="number" name="nro" class="form-control col-4" placeholder="542">
+                                  </div>
+                                </div>
+                              </div> --}}
+                        
+                            
                             <div class="col-md-4">                
                                 <div class="form-group">
-                                    <label for="destinatario">ASUNTO:</label>
-                                    <select class=" form-control buscador col" name="asunto" onchange="mPersonals(this.value);" required>
+                                    <label for="ASUNTO">ASUNTO:</label>
+                                    <select class=" form-control buscador col" name="asunto" onchange="mostrar(this.value);" required>
                                         <option selected disabled>SELECCIONE UNA OPCIÓN</option>
                                         <option value="DOTACION ORGANICA">DOTACIÓN ORGÁNICA</option>
                                         <option value="ASIGNACION">ASIGNACIÓN</option>
@@ -77,19 +90,36 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
+                            <div class="row" id="DEL-AL1" style="display: none;">
+                            <div class="col-md-4" >
+                                <div class="form-group" >
                                     <label for="remitente">DEL:</label>
-                                    <select class="form-control buscador " name="remitente" id="busqueda" required></select>
+                                    <select class="form-control buscador " name="remitente" id="busqueda" ></select>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="form-group">
+                                <div class="form-group" >
                                     <label for="destinatario">AL:</label>
-                                    <select class="form-control buscador" name="destinatario" id="busqueda2" required></select>
+                                    <select class="form-control buscador2" name="destinatario" id="busqueda2"></select>
                                 </div>
                             </div>
                         </div>
+                        <div class="row" id="AL-DEL2" style="display: none;">
+                            <div class="col-md-4">
+                                <div class="form-group" >
+                                    <label for="remitente">AL:</label>
+                                    <select class="form-control buscador3 " name="remitente" id="busqueda3" ></select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="destinatario">DEL:</label>
+                                    <select class="form-control buscador4" name="destinatario" id="busqueda4"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                         <div class="card elevation-2">
                             <div class="card-header">
                                 <b>Armas</b>
@@ -154,39 +184,54 @@
                         <table id="notas" class="table table-bordered table-striped">
                             <thead class="text-center text-white" style="background-color:#6A0304">
                                 <tr>
-                                    <th>NRO</th>
-                                    <th>FECHA</th>
+                                    {{-- <th>NRO</th>
+                                    <th>FECHA</th> --}}
                                     <th>DEL</th>
                                     <th>AL</th>
                                     <th>ASUNTO</th>
+                                    <th>ARMAS</th>
+                                    <th>CARTUCHOS</th>
+                                    <th>CARGADORES</th>
                                     <th>ACCIONES</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center">
                                 @foreach ($materials as $do)
                                     <tr>
-                                        <td>{{ $do->nro_doc }}</td>
-                                        <td>{{ $do->fecha_doc }}</td>
-                                        <td> 
-                                            @foreach ($persona as $datos)
-                                                @if ($do->remitente == $datos->id)
-                                                    {{$datos->nombres}}   
-                                                @endif    
-                                            @endforeach   
-                                        </td>
+                                        {{-- <td>{{ $do->nro_doc }}</td> --}}
+                                        
                                         <td>
-                                            @foreach ($persona as $datos)
-                                                @if ($do->destinatario == $datos->id)
-                                                    {{$datos->nombres}}   
+                                            @if ($do->remitente )
+                                                @foreach ($personal as $persona)
+                                                    @if ($persona->id==$do->remitente)
+                                                        {{ $persona->nombres }} 
+                                                    @endif    
+                                                @endforeach                                        
+                                            @endif  
+                                        </td>
+                                        
+                                        <td>
+                                            @if ($do->destinatario )
+                                            @foreach ($personal as $persona)
+                                                @if ($persona->id==$do->destinatario)
+                                                {{ $persona->nombres  }} 
                                                 @endif    
                                             @endforeach 
+                                            @endif  
                                         </td>
+                                        
                                         <td>{{ $do->asunto }}</td>
+
+
+                                        <td>{{ $do->armas }}</td>
+                                        <td>{{ $do->cartuchos }}</td>
+                                        <td>{{ $do->cargadores }}</td>
+                                     
                                         <td>
-                                            <a href="{{ route('print_mg', $do->id) }}" onclick="return editSeg();"class="btn btn-info">
+                                            <a href="" onclick="return editSeg();"class="btn btn-info">
                                                 Visualizar
                                             </a>
-                                            <a href="{{ route('delete_doc', $do->id) }}" onclick="return deleteSeg();" class="btn btn-danger">
+                                            <a href="" onclick="return deleteSeg();" class="btn btn-danger">
                                                 Borrar
                                             </a>
                                         </td>
@@ -206,8 +251,56 @@
             if(!confirm("¿Está usted seguro de querer eliminar este registro?"))
             event.preventDefault();
         }
+        function mostrar(id){ 
+      if (id == "DOTACION ORGANICA" ){
+        $("#DEL-AL1").show();
+        $("#AL-DEL2").hide();  
+
+      }
+      if(id == "ASIGNACION" ){
+        
+        $("#DEL-AL1").hide();
+        $("#AL-DEL2").show();    
+      }
+      if(id == "REEMPLAZO" ){
+        
+        $("#DEL-AL1").hide();
+        $("#AL-DEL2").show();   
+      }
+      if(id == "REPARACION" ){
+        
+        $("#DEL-AL1").show();
+        $("#AL-DEL2").hide();    
+      }
+      if(id == "MISION DE ESTUDIOS" ){
+        
+        $("#DEL-AL1").hide();
+        $("#AL-DEL2").show();  
+      }
+      if(id == "DESINCORPORACION"  ){
+        
+        $("#DEL-AL1").show();
+        $("#AL-DEL2").hide();     
+      }
+      if(id == "REINTEGRO"  ){
+        
+        $("#DEL-AL1").hide();
+        $("#AL-DEL2").show();  
+      }
+      if(id == "DEVOLUCION"  ){
+        
+        $("#DEL-AL1").show();
+        $("#AL-DEL2").hide();     
+      }
+      if(id == "OTROS"  ){
+        
+        $("#DEL-AL1").hide();
+        $("#AL-DEL2").show();    
+      }
+
+    }
     </script>
-    <script>
+    <script type="text/javascript">
         $(function() {
             $('.busqueda').select2({
                 // el buscador se ejecuta dentro del modal para que todo se inicialice
@@ -232,18 +325,26 @@
                 $.get(datos, function(data, status){
                 var $busqueda = $('#busqueda');
                 var $busqueda2 = $('#busqueda2');
+                var $busqueda3 = $('#busqueda3');
+                var $busqueda4 = $('#busqueda4');
                 
                 $busqueda.empty(); // remove old options
                 $busqueda.append($("<option selected disabled></option>").text('SELECCIONE UNA PERSONA'));
                 $busqueda2.append($("<option selected disabled></option>").text('SELECCIONE UNA PERSONA'));
+                $busqueda3.append($("<option selected disabled></option>").text('SELECCIONE UNA PERSONA'));
+                $busqueda4.append($("<option selected disabled></option>").text('SELECCIONE UNA PERSONA'));
                 $.each(data, function(key,value) {
                     $busqueda.append($("<option></option>").attr("value", value.id).text(value.CI + ' - ' + value.nombres));
                     $busqueda2.append($("<option></option>").attr("value", value.id).text(value.CI + ' - ' + value.nombres));
+                    $busqueda3.append($("<option></option>").attr("value", value.id).text(value.CI + ' - ' + value.nombres));
+                    $busqueda4.append($("<option></option>").attr("value", value.id).text(value.CI + ' - ' + value.nombres));
                     });
                 }).fail(function() {
                     console.log("Error");
                 });    
             });
         });
+
+       
     </script>
 @endsection

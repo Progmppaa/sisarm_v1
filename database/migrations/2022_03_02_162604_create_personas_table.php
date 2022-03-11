@@ -17,6 +17,7 @@ class CreatePersonasTable extends Migration
             $table->id();
 
             $table->integer('CI')->unique()->required();
+            $table->string('Fe_nac')->required();
             $table->string('nombres')->required();
             $table->string('apellidos')->required();
             $table->string('grado')->nullable();
@@ -24,6 +25,8 @@ class CreatePersonasTable extends Migration
             $table->string('destacamento')->required();
             $table->string('compania')->required();
             $table->bigInteger('telefono')->nullable();
+            $table->bigInteger('nro_carnet')->nullable();
+            $table->string('promo')->nullable();
 
             $table->timestamps();
         });
