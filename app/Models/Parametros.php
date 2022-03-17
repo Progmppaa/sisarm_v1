@@ -5,12 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Asunto extends Model
+class Parametros extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'nombre',
-        'nomenclatura',
-        'nota'
-    ];
 }

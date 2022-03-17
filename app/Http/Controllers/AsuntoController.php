@@ -14,7 +14,9 @@ class AsuntoController extends Controller
      */
     public function index()
     {
-        //
+        $asuntos = Asunto::get();
+        return $asuntos;
+        
     }
 
     /**

@@ -68,7 +68,7 @@
                         <input type="text" name="nro_carnet" class="form-control col">
                     </div>
                     <div class="form-group row">
-                        <label class=" col-3">Promo</label>
+                        <label class=" col-3">Promoción</label>
                         <input type="text" name="promo" class="form-control col">
                     </div>
                     <div class="modal-footer row my-3 pt-3">
@@ -125,17 +125,17 @@
                             </tr>
                         </thead>
                         <tbody class="text-center">
-                            @foreach ($personal as $personal)
+                            @foreach ($personal as $personas)
                             <tr>
-                                <td>{{ $personal->CI }}</td>
-                                <td>{{ $personal->nombres }}</td>
-                                <td>{{ $personal->apellidos }}</td>
-                                <td>{{ $personal->dependencia }}</td>
-                                <td>{{ $personal->grado }}</td>
-                                <td>{{ $personal->telefono }}</td>
+                                <td>{{ $personas->CI }}</td>
+                                <td>{{ $personas->nombres }}</td>
+                                <td>{{ $personas->apellidos }}</td>
+                                <td>{{ $personas->dependencia }}</td>
+                                <td>{{ $personas->grado }}</td>
+                                <td>{{ $personas->telefono }}</td>
                                 <td>
-                            <a href="{{ route('personal-destroy',$personal->id) }}" class="btn btn-danger" onclick="return deleteSeg();">Borrar</a>  
-                            <a href="{{ route('personal-edit',$personal->id) }}" onclick="return editSeg();" class=" btn btn-info">
+                            <a href="{{ route('personal-destroy',$personas->id) }}" class="btn btn-danger" onclick="return deleteSeg();">Borrar</a>  
+                            <a href="{{ route('personal-edit',$personas->id) }}" onclick="return editSeg();" class=" btn btn-info">
                             Editar
                             </a>                                  
                             </td>

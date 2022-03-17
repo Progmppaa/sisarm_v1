@@ -21,11 +21,11 @@ class GradoMilitarSeeder extends Seeder
        GradoMilitar::create(['grado'=>'SA']);
        GradoMilitar::create(['grado'=>'SS']);
        GradoMilitar::create(['grado'=>'Tte']);
-       GradoMilitar::create(['grado'=>'Ptte']);
-       GradoMilitar::create(['grado'=>'Cap']);
-       GradoMilitar::create(['grado'=>'May']);
+       GradoMilitar::create(['grado'=>'PTEE']);
+       GradoMilitar::create(['grado'=>'CAP']);
+       GradoMilitar::create(['grado'=>'MAY']);
        GradoMilitar::create(['grado'=>'TCNEL']);
-       GradoMilitar::create(['grado'=>'Cnel']);
+       GradoMilitar::create(['grado'=>'CNEL']);
        GradoMilitar::create(['grado'=>'G/B']);
        GradoMilitar::create(['grado'=>'G/D']);
        GradoMilitar::create(['grado'=>'M/G']);

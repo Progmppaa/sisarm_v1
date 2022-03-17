@@ -21,8 +21,8 @@ class CreateMovimientoDeMaterialsTable extends Migration
             $table->string('destinatario')->required();
             $table->string('asunto')->required();
             $table->json('armas')->required();
-            $table->integer('cargadores')->required();
-            $table->integer('cartuchos')->required();
+            $table->integer('cargadores');
+            $table->integer('cartuchos');
 
             
             $table->timestamps();
