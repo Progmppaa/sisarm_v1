@@ -90,5 +90,3 @@ Route::get('/parametros', [App\Http\Controllers\ParametrosController::class, 'in
 // Route::get('/parametros/guardar', [App\Http\Controllers\ParametrosController::class, 'store'])->name('parametros-store');
 Route::get('/parametros/edit/{id}', [App\Http\Controllers\ParametrosController::class, 'edit'])->name('parametros_edit');
 Route::post('/parametros/update/{id}', [App\Http\Controllers\ParametrosController::class, 'update'])->name('parametros_actualizar');
-
-

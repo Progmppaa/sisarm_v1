@@ -6,6 +6,7 @@
 
 @stop
 @section('contenido')
+<<<<<<< HEAD
 <div class="container align-items-center">
 
 
@@ -17,17 +18,34 @@
                 <div class="form-group row">
                     <label class="col-2 m-2">Nomenclatura</label>
                     <input type="text" name="nomenclatura" class="form-control col-4"
+=======
+<div class="container-fluid">
+    <div class="row pt-4">
+        <div class="col-12">
+            <form class="form-horizontal p-5"  method="POST"
+                action="{{ route('parametros_actualizar', $parametro->id) }}" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group row">
+                    <label class="col-2">Nomenclatura</label>
+                    <input type="text" name="nomenclatura" class="form-control col-3"
+>>>>>>> b6e21fe0bf93c278ef23c47784020f060bda84c4
                         value="{{ $parametro->nomenclatura }}">
                 </div>
 
                 <div class="form-group row">
+<<<<<<< HEAD
                     <label class=" col-2 m-2">Grado</label>
                     <select class="form-control col-4" name="grado" id="grados" value="{{ $parametro->grado }}"
+=======
+                    <label class=" col-2">Grado</label>
+                    <select class="form-control col-3" name="grado" id="grados" value="{{ $parametro->grado }}"
+>>>>>>> b6e21fe0bf93c278ef23c47784020f060bda84c4
                         style=" text-transform: uppercase;">
                     </select>
                 </div>
 
                 <div class="form-group row">
+<<<<<<< HEAD
                     <label class="col-2 m-2">Nombres</label>
                     <input type="text" name="nombres" class="form-control col-4" value="{{ $parametro->nombres }}">
                 </div>
@@ -50,6 +68,30 @@
                 <div class="form-group row ">
                     <div>
                         <button class="btn btn-info mr-2" align-center type="submit">Actualizar</button>
+=======
+                    <label class="col-2">Nombres</label>
+                    <input type="text" name="nombres" class="form-control col-3" value="{{ $parametro->nombres }}">
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-2">Apellidos</label>
+                    <input type="text" name="apellidos" class="form-control col-3" value="{{ $parametro->apellidos }}">
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-2">Cédula</label>
+                    <input type="text" name="CI" class="form-control col-3" value="{{ $parametro->CI }}">
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-2">Cargo</label>
+                    <input type="text" name="cargo" class="form-control col-3" value="{{ $parametro->cargo }}">
+                </div>
+
+                <div class="form-group row float-right">
+                    <div>
+                        <button class="btn btn-info mr-2" type="submit">Actualizar</button>
+>>>>>>> b6e21fe0bf93c278ef23c47784020f060bda84c4
                     </div>
                     <div>
                         <a href="{{ route('parametros') }}" class="btn btn-danger" type="submit">Cancelar</a>

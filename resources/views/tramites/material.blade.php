@@ -64,8 +64,9 @@
                             {{-- <div class="form-group">
                                 <div id="sOficio">
                                     <label>N° del Doc:</label>
-                                    <div class="row p-0 m-0" id="oficio">
-                                        <select class="form-control select2 col-4" name="nro_doc">
+
+
+                                    <select class="form-control select2 col-4" name="nro_doc">
                                             <option value="" selected>     </option>
                                         </select>
                                         <input type="text" name="nomenclatura" class="form-control col-4" id="nomenclatura">

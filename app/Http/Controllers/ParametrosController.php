@@ -51,8 +51,5 @@ class ParametrosController extends Controller
         $siglas = Parametros::get();
         return $siglas;
     }
+
 }
-
-
-
-
