@@ -11,7 +11,7 @@ class CreateParametrosTable extends Migration
     {
         Schema::create('parametros', function (Blueprint $table) {
             $table->id();
-            $table->string('nomenclatura')->nulleable();
+            $table->string('siglas_jefe')->nulleable();
             $table->string('grado');
             $table->string('nombres')->require();
             $table->string('apellidos')->require();

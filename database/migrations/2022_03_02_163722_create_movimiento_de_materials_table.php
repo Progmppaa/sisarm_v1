@@ -15,7 +15,6 @@ class CreateMovimientoDeMaterialsTable extends Migration
     {
         Schema::create('movimiento_de_materials', function (Blueprint $table) {
             $table->id();
-            // $table->string('nro_asun')->required();
             $table->string('nro_doc')->required();
             $table->string('remitente')->required();
             $table->string('destinatario')->required();

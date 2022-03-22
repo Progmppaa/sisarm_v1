@@ -19,7 +19,7 @@ class ParametrosController extends Controller
         $parametros->apellidos = $request->apellidos;
         $parametros->CI = $request->CI;
         $parametros->grado = $request->grado;
-        $parametros->nomenclatura = $request->nomenclatura;
+        $parametros->siglas_jefe = $request->siglas_jefe;
 
         $parametros->save();
 
@@ -41,7 +41,7 @@ class ParametrosController extends Controller
         $parametro->apellidos = $request->apellidos;
         $parametro->CI = $request->CI;
         $parametro->grado = $request->grado;
-        $parametro->nomenclatura = $request->nomenclatura;
+        $parametro->siglas_jefe = $request->siglas_jefe;
 
         $parametro->save();
 

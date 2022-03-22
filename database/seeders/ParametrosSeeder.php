@@ -15,11 +15,7 @@ class parametrosSeeder extends Seeder
             'nombres'=>'Rafael',
             'apellidos'=>'Meléndez Ysea',
             'grado'=>'PTTE',
-<<<<<<< HEAD
-            'nomenclatura'=>' ',
-=======
-            'Nomenclatura'=>' ',
->>>>>>> b6e21fe0bf93c278ef23c47784020f060bda84c4
+            'siglas_jefe'=>' ',
         ]);
 
         Parametros::create([
@@ -27,22 +23,15 @@ class parametrosSeeder extends Seeder
             'nombres'=>'José',
             'apellidos'=>'Del Valle Nuñéz Martinez',
             'grado'=>'CAP',
-<<<<<<< HEAD
-            'nomenclatura'=>' ',
-=======
-            'Nomenclatura'=>' ',
->>>>>>> b6e21fe0bf93c278ef23c47784020f060bda84c4
+            'siglas_jefe'=>' ',
+
         ]);
         Parametros::create([
             'cargo'=>'Jefe del Servicio de Armamento De La Guardia Nacional Bolivariana',
             'nombres'=>'Giacomo',
             'apellidos'=>'Sammito Bertolino',
             'grado'=>'G/B',
-<<<<<<< HEAD
-            'nomenclatura'=>'GSB',
-=======
-            'Nomenclatura'=>'GSB',
->>>>>>> b6e21fe0bf93c278ef23c47784020f060bda84c4
+            'siglas_jefe'=>'GSB',
         ]);
     }
 }

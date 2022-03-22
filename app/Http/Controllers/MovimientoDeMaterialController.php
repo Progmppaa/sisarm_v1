@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\MovimientoDeMaterial;
 use App\Models\Personas;
 use App\Models\Parametros;
+use App\Models\Asunto;
 use Illuminate\Http\Request;
 
 class MovimientoDeMaterialController extends Controller
@@ -47,7 +48,6 @@ class MovimientoDeMaterialController extends Controller
     
         
         $material = new MovimientoDeMaterial();
-        $material->nro = $request->nro;
         $material->nro_doc = $request->nro_doc;
         $material->asunto = $request->asunto;
         $material->remitente = $request->remitente;
@@ -66,9 +66,12 @@ class MovimientoDeMaterialController extends Controller
         //
     }
 
-    public function edit(MovimientoDeMaterial $movimientoDeMaterial)
+    public function visualizar()
     {
-        //
+        $material = MovimientoDeMaterial::get();
+        $asunto = asunto::get();
+        $parametros = Parametros::get();
+        return view('/tramites/visualizar_material', compact('material', 'parametros','asunto'));
     }
 
     public function update(Request $request, MovimientoDeMaterial $movimientoDeMaterial)

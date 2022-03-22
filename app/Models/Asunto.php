@@ -10,7 +10,7 @@ class Asunto extends Model
     use HasFactory;
     protected $fillable = [
         'nombre',
-        'nomenclatura',
+        'siglas_doc',
         'nota'
     ];
 }

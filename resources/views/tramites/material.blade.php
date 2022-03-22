@@ -45,8 +45,7 @@
 @stop
 @section('contenido')
     {{-- Modal Agregar Material Entregado --}}
-    <div class="modal fade" id="creacion" tabindex="-1" role="dialog" aria-labelledby="creacionLabel"
-        style="text-transform: uppercase;">
+    <div class="modal fade" id="creacion" tabindex="-1" role="dialog" style="text-transform: uppercase;">
         <div class="modal-dialog modal-lg">
             <div class="modal-content px-3 pb-0">
                 <div class="modal-header row d-inline ml-2">
@@ -55,68 +54,59 @@
                     </button>
                     <h4 class="modal-title text-center ml-4">Movimiento de Material de Guerra</h4>
                 </div>
-                <div class="modal-body text-center">
+                <div class="modal-body"
+                    style="align-content: center; align-items: center;display: flex;justify-content: center;">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('material-store') }}"
-                         enctype="multipart/form-data" id="form-nuevo">
+                        enctype="multipart/form-data" id="form-nuevo">
                         @csrf
-
                         <div class="row">
-                            {{-- <div class="form-group">
-                                <div id="sOficio">
+                            <div class="col-md-2">
+                                <div class="form-group">
                                     <label>N° del Doc:</label>
-
-
-                                    <select class="form-control select2 col-4" name="nro_doc">
-                                            <option value="" selected>     </option>
-                                        </select>
-                                        <input type="text" name="nomenclatura" class="form-control col-4" id="nomenclatura">
-                                        <input type="number" name="nro_doc" class="form-control col-4" placeholder="073">
-                                    </div>
+                                    <input type="number" name="nro_doc" class="form-control" placeholder="073">
                                 </div>
-                            </div> --}}
-
-
-                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="ASUNTO">ASUNTO:</label>
-                                    <select class=" form-control col" name="asunto" id="asuntos" onchange="mostrar(this.value);"
-                                        required>
-                                     
+                                    <select class=" form-control col" name="asunto" id="asuntos"
+                                        onchange="mostrar(this.value)" required>
                                     </select>
                                 </div>
                             </div>
+
                             <div class="row" id="DEL-AL1" style="display: none;">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="remitente">DEL:</label>
-                                        <select class="form-control buscador " name="remitente" id="busqueda"></select>
+                                        <select class="form-control " name="remitente" id="busqueda"></select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="destinatario">AL:</label>
-                                        <select class="form-control buscador2" name="destinatario" id="busqueda2"></select>
+                                        <select class="form-control " name="destinatario" id="busqueda2"></select>
                                     </div>
                                 </div>
                             </div>
                             <div class="row" id="AL-DEL2" style="display: none;">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="remitente">AL:</label>
-                                        <select class="form-control buscador3 " name="remitente" id="busqueda3"></select>
+                                        <select class="form-control  " name="remitente" id="busqueda3"></select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="destinatario">DEL:</label>
-                                        <select class="form-control buscador4" name="destinatario" id="busqueda4"></select>
+                                        <select class="form-control " name="destinatario" id="busqueda4"></select>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <select class=" form-control col-5" name="tipo_doc" id="tipo_doc" required>
-                            
+
                             <option selected disabled> SELECCIONE UN TIPO DE DOCUMENTO</option>
                             <option value="">Armamentos</option>
                             <option value="">Municiones</option>
@@ -187,13 +177,13 @@
                 <div class="card">
                     <div class="card-header" style="text-align:left;">
                         <h3 class="d-inline">Asignación de Material de Guerra</h3>
-                    
+
                         <button class=" d-inline btn btn-info float-right shadow " id="btn-creacion" data-toggle="modal"
-                        data-target="#creacion" name="Agregar Producto">
-                        Seleccione el Tipo de Documento que Desea Generar   
-                    </button>
-                    
-                </div>
+                            data-target="#creacion" name="Agregar Producto">
+                            Seleccione el Tipo de Documento que Desea Generar
+                        </button>
+
+                    </div>
                     <div class="card-body">
                         <table id="notas" class="table table-bordered table-striped">
                             <thead class="text-center text-white" style="background-color:#6A0304">
@@ -242,11 +232,8 @@
                                         <td>{{ $do->cargadores }}</td>
 
                                         <td>
-                                            <a href="" onclick="return editSeg();" class="btn btn-info">
+                                            <a href="{{ route('visualizar') }}" class="btn btn-info">
                                                 Visualizar
-                                            </a>
-                                            <a href="" onclick="return deleteSeg();" class="btn btn-danger">
-                                                Borrar
                                             </a>
                                         </td>
                                     </tr>
@@ -261,57 +248,19 @@
 @stop
 @section('scripts')
     <script>
-        function deleteSeg() {
-            if (!confirm("¿Está usted seguro de querer eliminar este registro?"))
-                event.preventDefault();
-        }
-
         function mostrar(id) {
-
-            // var url = 'extras/asunto/'+ id;
-            var asunto = "{{ url('/extras/asunto/ "+" id') }}";
-            $.get(asunto, function(data, status) {
-                var $el = $("#nomenclatura");
-                $el.text(data.nomenclatura);
-                console.log(data);
-
-            });
-
-            if (id == "DOTACIÓN ORGÁNICA" || id == "DEVOLUCIÓN" || id == "ASIGNACIÓN"|| id == "REEMPLAZO") {
-                $("#DEL-AL1").show();
-                $("#AL-DEL2").hide();
-
-            }
-           
-            if (id == "REPARACIÓN") {
-
+            if (id == "DOTACIÓN ORGÁNICA" || id == "DEVOLUCIÓN" || id == "ASIGNACIÓN" || id == "REEMPLAZO") {
                 $("#DEL-AL1").show();
                 $("#AL-DEL2").hide();
             }
-            if (id == "MISIÓN DE ESTUDIOS") {
+
+            if (id == "REPARACIÓN" || id == "MISIÓN DE ESTUDIOS" || id == "DESINCORPORACION" || id == "REINTEGRO" || id ==
+                "OTROS") {
 
                 $("#DEL-AL1").hide();
                 $("#AL-DEL2").show();
             }
-            if (id == "DESINCORPORACION") {
-
-                $("#DEL-AL1").show();
-                $("#AL-DEL2").hide();
-            }
-            if (id == "REINTEGRO") {
-
-                $("#DEL-AL1").hide();
-                $("#AL-DEL2").show();
-            }
-          
-            if (id == "OTROS") {
-
-                $("#DEL-AL1").hide();
-                $("#AL-DEL2").show();
-            }
-
         }
-
     </script>
     <script type="text/javascript">
         $(function() {
@@ -328,7 +277,7 @@
                     var $el = $("#armamentos");
                     $el.empty(); // remove old options
                     $el.append($("<option selected disabled></option>").text(
-                    'SELECCIONE UNA ARMA'));
+                        'SELECCIONE UNA ARMA'));
                     $.each(data, function(key, value) {
                         $el.append($("<option></option>").attr("value", value.nombre).text(
                             value.nombre + ' | ' + value.modelo));
@@ -342,10 +291,10 @@
                     var $asu = $("#asuntos");
                     $asu.empty(); // remove old options
                     $asu.append($("<option selected disabled></option>").text(
-                    'SELECCIONE UN ASUNTO'));
+                        'SELECCIONE UN ASUNTO'));
                     $.each(data, function(key, value) {
-                        $asu.append($("<option></option>").attr("value", value.id).text(
-                            value.nombre + ' | ' + value.nomenclatura));
+                        $asu.append($("<option></option>").attr("value", value.nombre).text(
+                            value.nombre));
                     });
                 }).fail(function() {
                     console.log("Error");
@@ -379,8 +328,6 @@
                 }).fail(function() {
                     console.log("Error");
                 });
-
-
             });
         });
     </script>

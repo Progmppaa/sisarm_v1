@@ -16,7 +16,7 @@ class CreateAsuntosTable extends Migration
         Schema::create('asuntos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('nomenclatura');
+            $table->string('siglas_doc');
             $table->string('nota');
             $table->timestamps();
         });

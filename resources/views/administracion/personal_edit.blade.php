@@ -7,68 +7,68 @@
 @stop
 @section('contenido')
 
-    <div class="row-col" style="text-transform: uppercase;">
+    <div class="row-col" style="text-transform: uppercase;margin-left:25%">
             <form class="form-horizontal p-5" action="{{ route('personal-actualizar', $personal->id) }}" method="POST">
                 @csrf
                 {{-- @method('PUT') --}}
                 <div class="form-group row">
                     <label for="titulo" class="col-2">Cédula</label>
-                    <input type="text" name="CI" class="form-control col-3" value="{{ $personal->CI }}">
+                    <input type="text" name="CI" class="form-control col-4" value="{{ $personal->CI }}">
                 </div>
                 <div class="form-group row">
                     <label for="titulo" class="col-2">Nombres</label>
-                    <input type="text" name="nombres" class="form-control col-3" value="{{ $personal->nombres }}">
+                    <input type="text" name="nombres" class="form-control col-4" value="{{ $personal->nombres }}">
                 </div>
                 <div class="form-group row">
                     <label for="titulo" class="col-2">Apellidos</label>
-                    <input type="text" name="apellidos" class="form-control col-3" value="{{ $personal->apellidos }}">
+                    <input type="text" name="apellidos" class="form-control col-4" value="{{ $personal->apellidos }}">
                 </div>
                 <div class="form-group row">
                     <label for="titulo" class="col-2">Fecha de Nacimiento</label>
-                    <input type="text" name="Fe_nac" class="form-control col-3" value="{{ $personal->Fe_nac }}">
+                    <input type="text" name="Fe_nac" class="form-control col-4" value="{{ $personal->Fe_nac }}">
                 </div>
 
                 <div class="form-group row">
                     <label class="col-2">Dependencia</label>
-                    <select class="form-control col-3" name="dependencia" id="dependencias"
+                    <select class="form-control col-4" name="dependencia" id="dependencias"
                         onchange="mDestacamento(this.value);" value="{{ $personal->dependencia }}"
                         style=" text-transform: uppercase;">
                     </select>
                 </div>
                 <div class="form-group row" id="id_dest" style="display: none;">
                     <label class="col-2">Destacamento</label>
-                    <select class="form-control col-3" onchange="mCompania(this.value);" name="destacamento"
+                    <select class="form-control col-4" onchange="mCompania(this.value);" name="destacamento"
                         id="destacamentos" value="{{ $personal->destacamento }}" style=" text-transform: uppercase;">
                     </select>
                 </div>
                 <div class="form-group row" id="id_comp" style="display: none;">
                     <label class="col-2">Compañía</label>
-                    <select class="form-control col-3" name="compania" id="companias" value="{{ $personal->compania }}"
+                    <select class="form-control col-4" name="compania" id="companias" value="{{ $personal->compania }}"
                         style=" text-transform: uppercase;">
                     </select>
                 </div>
 
                 <div class="form-group row">
                     <label class=" col-2">Grado</label>
-                    <select class="form-control col-3" name="grado" id="grados" value="{{ $personal->grado }}"
+                    <select class="form-control col-4" name="grado" id="grados" value="{{ $personal->grado }}"
                         style=" text-transform: uppercase;">
                     </select>
                 </div>
 
                 <div class="form-group row">
                     <label class=" col-2">Teléfono</label>
-                    <input type="text" name="telefono" class="form-control col-3" value="{{ $personal->telefono }}">
+                    <input type="text" name="telefono" class="form-control col-4" value="{{ $personal->telefono }}">
                 </div>
                 <div class="form-group row">
                     <label class=" col-2">Nro. de Carnet</label>
-                    <input type="text" name="nro_carnet" class="form-control col-3" value="{{ $personal->nro_carnet }}">
+                    <input type="text" name="nro_carnet" class="form-control col-4" value="{{ $personal->nro_carnet }}">
                 </div>
                 <div class="form-group row">
                     <label class=" col-2">Promoción</label>
-                    <input type="text" name="promo" class="form-control col-3" value="{{ $personal->promo }}">
+                    <input type="text" name="promo" class="form-control col-4" value="{{ $personal->promo }}">
                 </div>
 
-                <div class="form-group row float-right">
+                <div class="form-group row">
                     <div>
                         <button class="btn btn-info mr-2" type="submit">Guardar</button>
                     </div>

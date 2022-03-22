@@ -16,134 +16,134 @@ class AsuntoSeeder extends Seeder
     {
         Asunto::create([
             'nombre'=>'DOTACIÓN ORGÁNICA',
-            'nomenclatura'=>'DO',
-            'nota'=>''
+            'siglas_doc'=>'DO',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'ASIGNACIÓN',
-            'nomenclatura'=>'A',
-            'nota'=>''
+            'siglas_doc'=>'A',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'REEMPLAZO',
-            'nomenclatura'=>'REEM',
-            'nota'=>''
+            'siglas_doc'=>'REEM',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'REPARACIÓN',
-            'nomenclatura'=>'REPA',
-            'nota'=>''
+            'siglas_doc'=>'REPA',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'MISIÓN DE ESTUDIOS',
-            'nomenclatura'=>'ME',
-            'nota'=>''
+            'siglas_doc'=>'ME',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'DESINCORPORACIÓN',
-            'nomenclatura'=>'DESIN',
-            'nota'=>''
+            'siglas_doc'=>'DESIN',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'REINTEGRO',
-            'nomenclatura'=>'REIN',
-            'nota'=>''
+            'siglas_doc'=>'REIN',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'DEVOLUCIÓN',
-            'nomenclatura'=>'DEVO',
-            'nota'=>''
+            'siglas_doc'=>'DEVO',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'ASIGNACIÓN A UNIDADES',
-            'nomenclatura'=>'AU',
-            'nota'=>''
+            'siglas_doc'=>'AU',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'REINTEGRO POR BAJA',
-            'nomenclatura'=>'RB',
-            'nota'=>''
+            'siglas_doc'=>'RB',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'SOLVENCIA DE ARMAMENTOS',
-            'nomenclatura'=>'SA',
-            'nota'=>''
+            'siglas_doc'=>'SA',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'CONSTANCIA DE NO POSEER ARMAMENTOS',
-            'nomenclatura'=>'CA',
-            'nota'=>''
+            'siglas_doc'=>'CA',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'DEPOSITO MISIÓN DE ESTUDIO',
-            'nomenclatura'=>'DME',
-            'nota'=>''
+            'siglas_doc'=>'DME',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'REINTEGRO MISIÓN DE ESTUDIO',
-            'nomenclatura'=>'RME',
-            'nota'=>''
+            'siglas_doc'=>'RME',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'PLANILLA DE MOVIMIENTO DE DOTACIÓN DE MUNICIONES',
-            'nomenclatura'=>'PMDM',
-            'nota'=>''
+            'siglas_doc'=>'PMDM',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'PLANILLA DE MOVIMIENTO DE MATERIAL DOTADO',
-            'nomenclatura'=>'PMMD',
-            'nota'=>''
+            'siglas_doc'=>'PMMD',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]); Asunto::create([
             'nombre'=>'REINTEGRO DESINCORPORACIÓN DE UNIDADES',
-            'nomenclatura'=>'RDU',
-            'nota'=>''
+            'siglas_doc'=>'RDU',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]); Asunto::create([
             'nombre'=>'MUNICIONES (MOVIMIENTO INTERNO DE MATERIAL DE GUERRA)',
-            'nomenclatura'=>'MUN',
-            'nota'=>''
+            'siglas_doc'=>'MUN',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]); Asunto::create([
             'nombre'=>'PLANILLA DE REINTEGRO VARIOS',
-            'nomenclatura'=>'PRV',
-            'nota'=>''
+            'siglas_doc'=>'PRV',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]); Asunto::create([
             'nombre'=>'ARMAS EN REPARACIÓN',
-            'nomenclatura'=>'AREP',
-            'nota'=>''
+            'siglas_doc'=>'AREP',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]); Asunto::create([
             'nombre'=>'ARMAS DEVUELTAS QUE SE ENCONTRABAN EN REPARACIÓN',
-            'nomenclatura'=>'ADRE',
-            'nota'=>''
+            'siglas_doc'=>'ADRE',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]); Asunto::create([
             'nombre'=>'PLANILLA DE DOTACIÓN DE EXPLOSIVOS',
-            'nomenclatura'=>'PDEX',
-            'nota'=>''
+            'siglas_doc'=>'PDEX',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
 
         Asunto::create([
             'nombre'=>'PLANILLA DE MATERIAL PRESTADO',
-            'nomenclatura'=>'PMP',
-            'nota'=>''
+            'siglas_doc'=>'PMP',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
          Asunto::create([
             'nombre'=>'PLANILLA DE REINTEGRO DE MATERIAL PRESTADO',
-            'nomenclatura'=>'PRP',
-            'nota'=>''
+            'siglas_doc'=>'PRP',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
          Asunto::create([
             'nombre'=>'RECIBO DE MUNICIONES',
-            'nomenclatura'=>'RM',
-            'nota'=>''
+            'siglas_doc'=>'RM',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
         Asunto::create([
             'nombre'=>'RECIBO DE ACCESORIOS',
-            'nomenclatura'=>'RA',
-            'nota'=>''
+            'siglas_doc'=>'RA',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
     
         Asunto::create([
             'nombre'=>'OTROS',
-            'nomenclatura'=>'OTROS',
-            'nota'=>''
+            'siglas_doc'=>'OTROS',
+            'nota'=>'SERÁ OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVÍE EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN'
         ]);
     }
 }
