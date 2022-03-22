@@ -15,10 +15,16 @@ Route::get('/extras/armas', [App\Http\Controllers\Principal::class, 'armas'])->n
 Route::get('/extras/dependencias', [App\Http\Controllers\Principal::class, 'dependencias'])->name('dependencias');
 Route::get('/extras/personas', [App\Http\Controllers\Principal::class, 'personal'])->name('personas');
 Route::get('/extras/estados', [App\Http\Controllers\EstadosController::class, 'index'])->name('estados');
+Route::get('/extras/asuntos', [App\Http\Controllers\AsuntoController::class, 'index'])->name('asuntos');
+Route::get('/extras/asunto/{id}', [App\Http\Controllers\AsuntoController::class, 'show']);
+Route::post('/extras/siglas', [App\Http\Controllers\ParametrosController::class, 'siglas'])->name('siglas');
+
+
 // Administracion
 Route::get('/administracion/personal', [App\Http\Controllers\PersonasController::class, 'index'])->name('personal');
 Route::post('/administracion/personal/store', [App\Http\Controllers\PersonasController::class, 'store'])->name('personal-store');
-Route::post('/administracion/personal/edit/{id}', [App\Http\Controllers\PersonasController::class, 'update'])->name('personal-edit');
+Route::get('/administracion/personal/edit/{id}', [App\Http\Controllers\PersonasController::class, 'edit'])->name('personal-edit');
+Route::post('/administracion/personal/update/{id}', [App\Http\Controllers\PersonasController::class, 'update'])->name('personal-actualizar');
 Route::get('/administracion/personal/delete/{id}', [App\Http\Controllers\PersonasController::class, 'destroy'])->name('personal-destroy');
 Route::get('/administracion/OrdenPublico', [App\Http\Controllers\OrdenPublicosController::class, 'index'])->name('OrdenPublico');
 Route::get('/administracion/municiones', [App\Http\Controllers\MunicionesController::class, 'index'])->name('municiones');
@@ -78,3 +84,11 @@ Auth::routes();
 //gráfica
 Route::get('/DetallesArmas', [App\Http\Controllers\GraficosController::class, 'index'])->name('Detalles-armas');
 Route::get('/graficos/DetallesArmas/{id}', [App\Http\Controllers\GraficosController::class, 'show'])->name('Detalles-armas-show');
+
+//parametros
+Route::get('/parametros', [App\Http\Controllers\ParametrosController::class, 'index'])->name('parametros');
+// Route::get('/parametros/guardar', [App\Http\Controllers\ParametrosController::class, 'store'])->name('parametros-store');
+Route::get('/parametros/edit/{id}', [App\Http\Controllers\ParametrosController::class, 'edit'])->name('parametros_edit');
+Route::post('/parametros/update/{id}', [App\Http\Controllers\ParametrosController::class, 'update'])->name('parametros_actualizar');
+
+

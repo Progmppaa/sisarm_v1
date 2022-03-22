@@ -23,7 +23,7 @@ class CreatePersonasTable extends Migration
             $table->string('grado')->nullable();
             $table->string('dependencia')->required();
             $table->string('destacamento')->required();
-            $table->string('compania')->required();
+            $table->string('compania')->nullable();
             $table->bigInteger('telefono')->nullable();
             $table->bigInteger('nro_carnet')->nullable();
             $table->string('promo')->nullable();

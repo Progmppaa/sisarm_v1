@@ -42,18 +42,6 @@ class PersonasController extends Controller
 
         ]);
         Personas::create($request->all());
-
-        // $Personal = new Personas();
-        // $Personal->CI = $request->CI;
-        // $Personal->nombres = $request->nombres;
-        // $Personal->apellidos = $request->apellidos;
-        // $Personal->grado = $request->grado;
-        // $Personal->dependencia = $request->dependencia;
-        // $Personal->destacamento = $request->destacamento;
-        // $Personal->compania = $request->compania;
-        // $Personal->telefono = $request->telefono;
-      
-        // $Personal->save();
     
         return redirect('/administracion/personal')->with('success', 'Los datos se han registrado corretamente.');
     } catch (\Throwable $th) {
@@ -68,15 +56,31 @@ class PersonasController extends Controller
     }
 
 
-    public function edit(Personas $personas)
+    public function edit($id)
     {
-        //
+        $personal = Personas::find($id);
+        return view('/administracion/personal_edit', compact('personal'));
     }
 
 
-    public function update(Request $request, Personas $personas)
+    public function update(Request $request, $id)
     {
-        //
+        $personal = Personas::find($id);
+        $personal->CI = $request->CI;
+        $personal->nombres = $request->nombres;
+        $personal->apellidos = $request->apellidos;
+        $personal->Fe_nac = $request->Fe_nac;
+        $personal->grado = $request->grado;
+        $personal->dependencia = $request->dependencia;
+        $personal->destacamento = $request->destacamento;
+        $personal->compania = $request->compania;
+        $personal->telefono = $request->telefono;
+        $personal->nro_carnet = $request->nro_carnet;
+        $personal->promo = $request->promo;
+
+        $personal->save();
+
+        return redirect('/administracion/personal');
     }
 
     public function destroy($id)

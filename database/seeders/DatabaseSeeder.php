@@ -26,5 +26,7 @@ class DatabaseSeeder extends Seeder
         $this->call(OptronicosSeeder::class);
         $this->call(PersonalSeeder::class);
         $this->call(GradoMilitarSeeder::class);
+        $this->call(ParametrosSeeder::class);
+        $this->call(AsuntoSeeder::class);
     }
 }

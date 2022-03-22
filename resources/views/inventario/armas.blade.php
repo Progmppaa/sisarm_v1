@@ -9,15 +9,16 @@
 <div class="row p-3 mx-auto">
     @foreach ($estados as $estado)
     <div class="col-lg-3">
-        <div class="card elevation-4 text-white "style="background:{{$estado->color}}">
-            <div class="card-header bg-gradient">
+        <div class="card elevation-4 text-white">
+            <div class="card-header" style="background:{{$estado->color}} ">
+                {{-- bg-gradient --}}
                 <b>{{$estado->nombre}}</b>
             </div>
-            <div class="card-body " style="background:{{$estado->color}}">
+            <div class="card-body" style="background:{{$estado->color}}">
                 <h3>0</h3>
                 <strong>Armas en el estado</strong>
             </div>
-            <div class="card-footer">
+            <div class="card-footer" style="background:{{$estado->color}}">
                 <a class="text-white" href="{{ route('Detalles-armas-show',$estado->id) }}">Ver detalles</a>
             </div>
         </div>
