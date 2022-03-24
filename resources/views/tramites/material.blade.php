@@ -59,14 +59,30 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('material-store') }}"
                         enctype="multipart/form-data" id="form-nuevo">
                         @csrf
-                        <div class="row">
-                            <div class="col-md-2">
+                        <div class="row text-center">
+                            <div class="col-2 ml-1">
                                 <div class="form-group">
                                     <label>N° del Doc:</label>
                                     <input type="number" name="nro_doc" class="form-control" placeholder="073">
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="ASUNTO">TIPO DOC</label>
+                                    <select class=" form-control col" name="tipo_doc" id="tipo_doc" required>
+
+                                        <option selected disabled> SELECCIONE UN TIPO DE DOCUMENTO</option>
+                                        <option value="">Armamentos</option>
+                                        <option value="">Municiones</option>
+                                        <option value="">Orden Público</option>
+                                        <option value="">Explosivos</option>
+                                        <option value="">Equipos Ópticos y Optrónicos</option>
+                                        <option value="">Artillerías Aereas</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
                                 <div class="form-group">
                                     <label for="ASUNTO">ASUNTO:</label>
                                     <select class=" form-control col" name="asunto" id="asuntos"
@@ -75,47 +91,38 @@
                                 </div>
                             </div>
 
-                            <div class="row" id="DEL-AL1" style="display: none;">
-                                <div class="col-md-6">
+                            <div class="row" id="DEL-AL1" style="display: none; justify-content:end;">
+                                <div class="col-6 ">
                                     <div class="form-group">
                                         <label for="remitente">DEL:</label>
                                         <select class="form-control " name="remitente" id="busqueda"></select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
+                                <div class="col-6">
+                                    <div class="form-group ">
                                         <label for="destinatario">AL:</label>
                                         <select class="form-control " name="destinatario" id="busqueda2"></select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" id="AL-DEL2" style="display: none;">
-                                <div class="col-md-6">
+                            <div class="row ml-1" id="AL-DEL2" style="display: none; justify-content:end;">
+                                <div class="col-5">
                                     <div class="form-group">
                                         <label for="remitente">AL:</label>
                                         <select class="form-control  " name="remitente" id="busqueda3"></select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <div class="form-group">
                                         <label for="destinatario">DEL:</label>
                                         <select class="form-control " name="destinatario" id="busqueda4"></select>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
-                        <select class=" form-control col-5" name="tipo_doc" id="tipo_doc" required>
 
-                            <option selected disabled> SELECCIONE UN TIPO DE DOCUMENTO</option>
-                            <option value="">Armamentos</option>
-                            <option value="">Municiones</option>
-                            <option value="">Orden Público</option>
-                            <option value="">Explosivos</option>
-                            <option value="">Equipos Ópticos y Optrónicos</option>
-                            <option value="">Artillerías Aereas</option>
-
-                        </select>
 
                         <div class="card elevation-2">
                             <div class="card-header">
