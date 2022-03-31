@@ -61,7 +61,7 @@ Route::get('/administracion/armamento/delete/{id}', [App\Http\Controllers\ArmasC
 
 // INVENTARIOS
 // Armamento
-Route::get('/inventario/armamento', [App\Http\Controllers\InventarioArmasController::class, 'index'])->name('inv-armamento');
+Route::get('/inventario/armas', [App\Http\Controllers\InventarioArmasController::class, 'index'])->name('inv-armamento');
 Route::post('/inventario/armamento/store', [App\Http\Controllers\InventarioArmasController::class, 'store'])->name('inv-armamento-store');
 Route::post('/inventario/armamento/edit', [App\Http\Controllers\InventarioArmasController::class, 'update'])->name('inv-armamento-edit');
 Route::post('/inventario/armamento/delete', [App\Http\Controllers\InventarioArmasController::class, 'destroy'])->name('inv-armamento-destroy');

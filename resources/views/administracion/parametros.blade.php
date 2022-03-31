@@ -1,6 +1,6 @@
 @extends("theme.$theme.layout")
 @section('titulo')
-    Parametros
+    Parámetros
 @stop
 @section('styles')
 

@@ -6,78 +6,79 @@
 
 @stop
 @section('contenido')
+<div class="container pt-5 w-50 ">
+    <div class="row-col card align-items-center shadow p-3 mb-5 rounded" style="text-transform: uppercase;margin-left:10%;background: rgb(235, 235, 235)"> 
+        <form class="form-horizontal pt-5" action="{{ route('personal-actualizar', $personal->id) }}" method="POST">
+            @csrf
+            {{-- @method('PUT') --}}
+            <div class="form-group row">
+                <label for="titulo" class="col-4">Cédula</label>
+                <input type="text" name="CI" class="form-control col-6" value="{{ $personal->CI }}">
+            </div>
+            <div class="form-group row">
+                <label for="titulo" class="col-4">Nombres</label>
+                <input type="text" name="nombres" class="form-control col-6" value="{{ $personal->nombres }}">
+            </div>
+            <div class="form-group row">
+                <label for="titulo" class="col-4">Apellidos</label>
+                <input type="text" name="apellidos" class="form-control col-6" value="{{ $personal->apellidos }}">
+            </div>
+            <div class="form-group row">
+                <label for="titulo" class="col-4">Fecha de Nacimiento</label>
+                <input type="text" name="Fe_nac" class="form-control col-6" value="{{ $personal->Fe_nac }}">
+            </div>
 
-    <div class="row-col" style="text-transform: uppercase;margin-left:25%">
-            <form class="form-horizontal p-5" action="{{ route('personal-actualizar', $personal->id) }}" method="POST">
-                @csrf
-                {{-- @method('PUT') --}}
-                <div class="form-group row">
-                    <label for="titulo" class="col-2">Cédula</label>
-                    <input type="text" name="CI" class="form-control col-4" value="{{ $personal->CI }}">
-                </div>
-                <div class="form-group row">
-                    <label for="titulo" class="col-2">Nombres</label>
-                    <input type="text" name="nombres" class="form-control col-4" value="{{ $personal->nombres }}">
-                </div>
-                <div class="form-group row">
-                    <label for="titulo" class="col-2">Apellidos</label>
-                    <input type="text" name="apellidos" class="form-control col-4" value="{{ $personal->apellidos }}">
-                </div>
-                <div class="form-group row">
-                    <label for="titulo" class="col-2">Fecha de Nacimiento</label>
-                    <input type="text" name="Fe_nac" class="form-control col-4" value="{{ $personal->Fe_nac }}">
-                </div>
+            <div class="form-group row">
+                <label class="col-4">Dependencia</label>
+                <select class="form-control col-6" name="dependencia" id="dependencias"
+                    onchange="mDestacamento(this.value);" value="{{ $personal->dependencia }}"
+                    style=" text-transform: uppercase;">
+                </select>
+            </div>
+            <div class="form-group row" id="id_dest" style="display: none;">
+                <label class="col-4">Destacamento</label>
+                <select class="form-control col-6" onchange="mCompania(this.value);" name="destacamento" id="destacamentos"
+                    value="{{ $personal->destacamento }}" style=" text-transform: uppercase;">
+                </select>
+            </div>
+            <div class="form-group row" id="id_comp" style="display: none;">
+                <label class="col-4">Compañía</label>
+                <select class="form-control col-6" name="compania" id="companias" value="{{ $personal->compania }}"
+                    style=" text-transform: uppercase;">
+                </select>
+            </div>
 
-                <div class="form-group row">
-                    <label class="col-2">Dependencia</label>
-                    <select class="form-control col-4" name="dependencia" id="dependencias"
-                        onchange="mDestacamento(this.value);" value="{{ $personal->dependencia }}"
-                        style=" text-transform: uppercase;">
-                    </select>
-                </div>
-                <div class="form-group row" id="id_dest" style="display: none;">
-                    <label class="col-2">Destacamento</label>
-                    <select class="form-control col-4" onchange="mCompania(this.value);" name="destacamento"
-                        id="destacamentos" value="{{ $personal->destacamento }}" style=" text-transform: uppercase;">
-                    </select>
-                </div>
-                <div class="form-group row" id="id_comp" style="display: none;">
-                    <label class="col-2">Compañía</label>
-                    <select class="form-control col-4" name="compania" id="companias" value="{{ $personal->compania }}"
-                        style=" text-transform: uppercase;">
-                    </select>
-                </div>
+            <div class="form-group row">
+                <label class=" col-4">Grado</label>
+                <select class="form-control col-6" name="grado" id="grados" value="{{ $personal->grado }}"
+                    style=" text-transform: uppercase;">
+                </select>
+            </div>
 
-                <div class="form-group row">
-                    <label class=" col-2">Grado</label>
-                    <select class="form-control col-4" name="grado" id="grados" value="{{ $personal->grado }}"
-                        style=" text-transform: uppercase;">
-                    </select>
-                </div>
+            <div class="form-group row">
+                <label class=" col-4">Teléfono</label>
+                <input type="text" name="telefono" class="form-control col-6" value="{{ $personal->telefono }}">
+            </div>
+            <div class="form-group row">
+                <label class=" col-4">Nro. de Carnet</label>
+                <input type="text" name="nro_carnet" class="form-control col-6" value="{{ $personal->nro_carnet }}">
+            </div>
+            <div class="form-group row">
+                <label class=" col-4 pb-3">Promoción</label>
+                <input type="text" name="promo" class="form-control col-6" value="{{ $personal->promo }}">
+            </div>
 
-                <div class="form-group row">
-                    <label class=" col-2">Teléfono</label>
-                    <input type="text" name="telefono" class="form-control col-4" value="{{ $personal->telefono }}">
-                </div>
-                <div class="form-group row">
-                    <label class=" col-2">Nro. de Carnet</label>
-                    <input type="text" name="nro_carnet" class="form-control col-4" value="{{ $personal->nro_carnet }}">
-                </div>
-                <div class="form-group row">
-                    <label class=" col-2">Promoción</label>
-                    <input type="text" name="promo" class="form-control col-4" value="{{ $personal->promo }}">
-                </div>
-
-                <div class="form-group row">
-                    <div>
+            <div class="container-fluid ">
+                <div class="row w-100 align-items-center">
+                    <div class="col text-center pb-5">
                         <button class="btn btn-info mr-2" type="submit">Guardar</button>
-                    </div>
-                    <div>
                         <a href="/administracion/personal" class="btn btn-danger">Cancelar</a>
                     </div>
                 </div>
-            </form>
+            </div>
+        </form>
     </div>
+</div>
 @stop
 @section('scripts')
     <script>

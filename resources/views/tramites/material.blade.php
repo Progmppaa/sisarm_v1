@@ -54,8 +54,7 @@
                     </button>
                     <h4 class="modal-title text-center ml-4">Movimiento de Material de Guerra</h4>
                 </div>
-                <div class="modal-body"
-                    style="align-content: center; align-items: center;display: flex;justify-content: center;">
+                <div class="modal-body " style="display: flex;align-items-left">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('material-store') }}"
                         enctype="multipart/form-data" id="form-nuevo">
                         @csrf
@@ -106,13 +105,13 @@
                                 </div>
                             </div>
                             <div class="row ml-1" id="AL-DEL2" style="display: none; justify-content:end;">
-                                <div class="col-5">
+                                <div class="col-6">
                                     <div class="form-group">
                                         <label for="remitente">AL:</label>
                                         <select class="form-control  " name="remitente" id="busqueda3"></select>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="destinatario">DEL:</label>
                                         <select class="form-control " name="destinatario" id="busqueda4"></select>

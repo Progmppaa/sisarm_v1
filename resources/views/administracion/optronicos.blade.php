@@ -26,7 +26,7 @@
                     </div>
                     <div class="modal-footer row my-3 pt-3">
                         <div class="col">
-                            <button type="submit" class="btn btn-primary" id="btn-nuevo">
+                            <button type="submit" class="btn bg-gradient-primary" id="btn-nuevo">
                                 Agregar
                             </button>
                         </div>
@@ -49,7 +49,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3  class="d-inline">Lista de Optrónicos</h3>
-                    <button class="d-inline btn btn-info shadow float-right" id="btn-creacion" 
+                    <button class="d-inline btn bg-gradient-info shadow float-right" id="btn-creacion" 
                         data-toggle="modal" data-target="#creacion" name="Agregar Producto">
                         Agregar un Nuevo Optrónicos
                     </button>

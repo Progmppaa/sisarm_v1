@@ -73,13 +73,13 @@
                     </div>
                     <div class="modal-footer row my-3 pt-3">
                         <div class="col">
-                            <button type="submit" class="btn btn-primary" id="btn-nuevo">
+                            <button type="submit" class="btn bg-gradient-primary" id="btn-nuevo">
                                 Agregar
                             </button>
                         </div>
-                        <input class="btn bg-info" type="reset" value="Limpiar">
+                        <input class="btn bg-gradient-info" type="reset" value="Limpiar">
                         <div class="col">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">
+                            <button type="button" class="btn bg-gradient-danger" data-dismiss="modal">
                                 Cancelar
                             </button>
                         </div>
@@ -103,7 +103,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3  class="d-inline">Listado Del Personal</h3>
-                    <button class="d-inline btn btn-info shadow float-right" id="btn-creacion" 
+                    <button class="d-inline btn bg-gradient-info shadow float-right" id="btn-creacion" 
                         data-toggle="modal" data-target="#creacion" name="Agregar Producto">
                         Nueva Persona
                     </button>
@@ -134,8 +134,8 @@
                                 <td>{{ $personas->grado }}</td>
                                 <td>{{ $personas->telefono }}</td>
                                 <td>
-                            <a href="{{ route('personal-destroy',$personas->id) }}" class="btn btn-danger" onclick="return deleteSeg();">Borrar</a>  
-                            <a href="{{ route('personal-edit',$personas->id) }}" onclick="return editSeg();" class=" btn btn-info">
+                            <a href="{{ route('personal-destroy',$personas->id) }}" class="btn bg-gradient-danger" onclick="return deleteSeg();">Borrar</a>  
+                            <a href="{{ route('personal-edit',$personas->id) }}" onclick="return editSeg();" class=" btn bg-gradient-info">
                             Editar
                             </a>                                  
                             </td>

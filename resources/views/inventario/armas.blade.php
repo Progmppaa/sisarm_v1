@@ -11,7 +11,7 @@
     <div class="col-lg-3">
         <div class="card elevation-4 text-white">
             <div class="card-header" style="background:{{$estado->color}} ">
-                {{-- bg-gradient --}}
+                
                 <b>{{$estado->nombre}}</b>
             </div>
             <div class="card-body" style="background:{{$estado->color}}">
