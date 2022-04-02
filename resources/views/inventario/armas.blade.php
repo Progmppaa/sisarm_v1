@@ -1,4 +1,4 @@
-<!-- @extends("theme.$theme.layout")
+@extends("theme.$theme.layout")
 @section('titulo')
     Armamento
 @stop
@@ -27,4 +27,4 @@
 </div>
 @stop
 @section('scripts')
-@endsection -->
+@endsection

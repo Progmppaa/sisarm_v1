@@ -22,8 +22,6 @@ class RoleSeeder extends Seeder
         $r_user3 = Role::create(['name' => 'explisivos']);
         $r_user4 = Role::create(['name' => 'orden_publico']);
         
-        
-        
         Permission::create(['name' => 'general'])->assignRole($r_root);
         Permission::create(['name' => 'mov_material'])->assignRole($r_root);
         Permission::create(['name' => 'armamento'])->syncRoles($r_root, $r_user1, $r_admin);

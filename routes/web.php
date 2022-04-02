@@ -29,9 +29,10 @@ Route::get('/administracion/personal/delete/{id}', [App\Http\Controllers\Persona
 Route::get('/administracion/OrdenPublico', [App\Http\Controllers\OrdenPublicosController::class, 'index'])->name('OrdenPublico');
 Route::get('/administracion/municiones', [App\Http\Controllers\MunicionesController::class, 'index'])->name('municiones');
 Route::get('/administracion/optronicos', [App\Http\Controllers\OptronicosController::class, 'index'])->name('optronicos');
-
 Route::get('/grado', [App\Http\Controllers\GradoMilitarController::class, 'index'])->name('grado');
 
+//Explosivos
+// Route::get('/administracion/explosivos', [App\Http\Controllers\ExplosivosController::class, 'index'])->name('/administracion/explosivos');
 
 // Material de guerra
 Route::get('/tramites/material_de_guerra', [App\Http\Controllers\MovimientoDeMaterialController::class, 'index'])->name('material');
