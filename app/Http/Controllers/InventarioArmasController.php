@@ -13,7 +13,7 @@ class InventarioArmasController extends Controller
     {
         $armas = InventarioArmas::get();
         $estados = Estados::get();
-        return view('inventario/armas', compact('armas','estados'));
+        return view('/inventario/armas', compact('armas','estados'));
     }
 
     public function create()

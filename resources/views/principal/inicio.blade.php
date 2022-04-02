@@ -17,7 +17,7 @@
                         <div class="col">
                             <h3>{{$ArmasDisp}}</h3>
                             <span>Disponible</span>
-                            <h6 ><a href="/inventario/armas" class="text-white-50">Asignar armamento</a></h6>
+                            <h6 ><a href="/tramites/material_de_guerra" class="text-white-50">Asignar armamento</a></h6>
                         </div>
                         <div class="col">
                             <h3>0</h3>
@@ -40,7 +40,7 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
-                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
+                            <h6 ><a href="/tramites/material_de_guerra" class="text-white-50">Asignar Municiones</a></h6>
                         </div>
                         <div class="col">
                             <h3>0</h3>
@@ -85,7 +85,7 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
-                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
+                            <h6 ><a href="/tramites/material_de_guerra" class="text-white-50">Asignar Orden Público</a></h6>
 
                         </div>
                         <div class="col">
@@ -111,7 +111,7 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
-                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
+                            <h6 ><a href="/tramites/material_de_guerra" class="text-white-50">Asignar Explosivos</a></h6>
 
                         </div>
                         <div class="col">
@@ -135,7 +135,7 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
-                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
+                            <h6 ><a href="/tramites/material_de_guerra" class="text-white-50">Asignar Equipos Ópticos y Optrópicos</a></h6>
 
                         </div>
                         <div class="col">
@@ -159,7 +159,7 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Disponible</span>
-                            <h6 ><a href="#" class="text-white-50">Asignar armamento</a></h6>
+                            <h6 ><a href="/tramites/material_de_guerra" class="text-white-50">Asignar Artillería Aerea</a></h6>
 
                         </div>
                         <div class="col">
