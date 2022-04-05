@@ -692,8 +692,23 @@
         function acc(opcions){
             if (opcions == 'si'){
                 $('#accesorios').show();
-                
+                var urlAccesorios = "{{ url('/administracion/formularioacc') }}";
+                // console.log(urlArtilleriaA);
+                $.get(urlAccesorios, function(data, status) {
+                    // console.log(data);
+                    var $el = $("#selecaccesorios");
+                    $el.empty(); // remove old options
+                    $el.append($("<option selected disabled></option>").text(
+                        'SELECCIONE UN ACCESORIO'));
+                    $.each(data, function(key, value) {
+                        $el.append($("<option></option>").attr("value", value.id).text(
+                            value.descripcion));
+                    });
+                }).fail(function() {
+                    console.log("Error");
+                });
             }
+
         }
     </script>
 
