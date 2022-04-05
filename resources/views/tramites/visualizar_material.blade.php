@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <title>Document</title>
-<hr>
+     
 </head>
 
-<body>
+<body class="m-3">
     <div class="row">
         <div class="col-2">
             <img src="" alt="" srcset="">
@@ -84,8 +83,9 @@
     <div class="row justify-content-center">
         <table class="w-100 mx-3" border="3">
             <tr>
-                <td>SERA OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVIE
-                    EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN</td>
+                {{-- <td>SERA OBJETO DE UNA SANCIÓN DISCIPLINARIA Y PECUNIARIA QUIEN DESTRUYA Y EXTRAVIE
+                    EL ARMA DE REGLAMENTO Y/O LA HOJA DE ASIGNACIÓN</td> --}}
+                    {{-- <td>{{ $asunto->nota}}</td> --}}
             </tr>
         </table>
     </div>

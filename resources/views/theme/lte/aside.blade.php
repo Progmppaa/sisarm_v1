@@ -93,6 +93,12 @@
                 <p>Parámetros</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="{{ route('accesorios') }}" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Accesorios</p>
+              </a>
+            </li>
           </ul>
         </li>
         @endcan
@@ -214,9 +220,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('material') }}" class="nav-link">
+              <a href="{{ route('dependencias') }}" class="nav-link">
                 <i class="fas fa-people-carry nav-icon"></i>
                 <p>Asignación Dependencia</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('visualizar') }}" class="nav-link">
+                <i class="fas fa-eye nav-icon"></i>
+                <p>Vizualizar</p>
               </a>
             </li>
           </ul>

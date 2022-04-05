@@ -11,6 +11,8 @@ class MunicionesController extends Controller
     public function index()
     {
         $municiones = Municiones::get();
+        return view('administracion/municiones', compact('municiones'));
+
         return $municiones;
     }
 

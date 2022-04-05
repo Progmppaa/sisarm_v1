@@ -9,6 +9,6 @@ class OrdenPublicosController extends Controller
     public function index()
     {
         $OrdenPublicos = OrdenPublico::get();
-        return view('administracion/OrdenPublico', compact('OrdenPublicos'));
+        return $OrdenPublicos;
     }
 }

@@ -3,45 +3,173 @@
     Movimiento de Material
 @stop
 @section('styles')
-    <script language="JavaScript">
-        function aggProd() {
-            var p = document.querySelector(".material");
-            var p_prime = p.cloneNode(true);
-            document.getElementById('materiales').appendChild(p_prime);
+<script language="JavaScript">
+    function aggProd() {
+        var p = document.querySelector(".material");
+        var p_prime = p.cloneNode(true);
+        document.getElementById('armass').appendChild(p_prime);
+    }
+    // Agregar Municion
+    function aggMunicion() {
+        var m = document.querySelector(".clamuni");
+        var m_prime = m.cloneNode(true);
+        document.getElementById('municion').appendChild(m_prime);
+    }
+     // Agregar Orden Público
+     function aggOrdenPublico() {
+        var op = document.querySelector(".claorden");
+        var op_prime = op.cloneNode(true);
+        document.getElementById('publi').appendChild(op_prime);
+    }
+    // Agregar Explosivos
+    function aggExplosivos() {
+        var explosivos = document.querySelector(".claexplo");
+        var explosivos_prime = explosivos.cloneNode(true);
+        document.getElementById('explo').appendChild(explosivos_prime);
+    }
+    // Agregar Equipos Opticos y Optrópicos
+    function aggEquipos() {
+        var equipos = document.querySelector(".eopop");
+        var equipos_prime = equipos.cloneNode(true);
+        document.getElementById('equipo').appendChild(equipos_prime);
+    }
+    // Agregar Artillería Aerea
+    function aggArtiaerea() {
+        var artilleria = document.querySelector(".clasartiae");
+        var artilleria_prime = artilleria.cloneNode(true);
+        document.getElementById('equipo').appendChild(artilleria_prime);
+    }
+    
 
-        }
-        //Función eliminar elemento
-        function eliminar_elemento(valor) {
-            var elementos = document.getElementById('materiales');
-            var vm = 0;
-            console.log(vm, 'inicio');
+    
+    //Función eliminar elemento
+    function eliminar_elemento(valor) {
+        var elementos = document.getElementById('armass');
+        var vm = 0;
+        console.log(vm, 'inicio');
+        var vm = elementos.children.length;
+        console.log(vm, 'cuenta');
+
+        if (vm >= 2) {
+            console.log(vm, 'if');
+            valor.parentNode.parentNode.removeChild(valor.parentNode);
             var vm = elementos.children.length;
-            console.log(vm, 'cuenta');
+            console.log(vm, 'end if');
+        };
+        var vm = 0;
 
-            if (vm >= 2) {
-                console.log(vm, 'if');
-                valor.parentNode.parentNode.removeChild(valor.parentNode);
-                var vm = elementos.children.length;
-                console.log(vm, 'end if');
-            };
-            var vm = 0;
+        // valor.parentNode.parentNode.removeChild(valor.parentNode);
 
-            // valor.parentNode.parentNode.removeChild(valor.parentNode);
+    }
+     //Eliminar Municion
+     function eliminar_municion(valor) {
+        var eliminarm = document.getElementById('municion');
+        var vm = 0;
+        console.log(vm, 'inicio');
+        var vm = eliminarm.children.length;
+        console.log(vm, 'cuenta');
 
-        }
+        if (vm >= 2) {
+            console.log(vm, 'if');
+            valor.parentNode.parentNode.removeChild(valor.parentNode);
+            var vm = eliminarm.children.length;
+            console.log(vm, 'end if');
+        };
+        var vm = 0;
 
-        function aggCargador() {
-            var cargador = document.querySelector(".cargador");
-            var cargador_copia = cargador.cloneNode(true);
-            document.getElementById('cargadores').appendChild(cargador_copia);
-        }
+        // valor.parentNode.parentNode.removeChild(valor.parentNode);
 
-        function aggCartucho() {
-            var cartucho = document.querySelector(".cartucho");
-            var cartucho_copia = cartucho.cloneNode(true);
-            document.getElementById('cartuchos').appendChild(cartucho_copia);
-        }
-    </script>
+    }
+    //Eliminar Orden Público
+    function eliminar_ordenpublico(valor) {
+        var opeliminar = document.getElementById('publi');
+        var vm = 0;
+        console.log(vm, 'inicio');
+        var vm = opeliminar.children.length;
+        console.log(vm, 'cuenta');
+
+        if (vm >= 2) {
+            console.log(vm, 'if');
+            valor.parentNode.parentNode.removeChild(valor.parentNode);
+            var vm = opeliminar.children.length;
+            console.log(vm, 'end if');
+        };
+        var vm = 0;
+
+        // valor.parentNode.parentNode.removeChild(valor.parentNode);
+
+    }
+    //Eliminar Explosivos
+    function eliminar_explosivos(valor) {
+        var exploeliminar = document.getElementById('explo');
+        var vm = 0;
+        console.log(vm, 'inicio');
+        var vm = exploeliminar.children.length;
+        console.log(vm, 'cuenta');
+
+        if (vm >= 2) {
+            console.log(vm, 'if');
+            valor.parentNode.parentNode.removeChild(valor.parentNode);
+            var vm = exploeliminar.children.length;
+            console.log(vm, 'end if');
+        };
+        var vm = 0;
+
+        // valor.parentNode.parentNode.removeChild(valor.parentNode);
+
+    }
+    //Eliminar Equipos Opticos y Optrópicos
+    function eliminar_equipos(valor) {
+        var equieliminar = document.getElementById('equipo');
+        var vm = 0;
+        console.log(vm, 'inicio');
+        var vm = equieliminar.children.length;
+        console.log(vm, 'cuenta');
+
+        if (vm >= 2) {
+            console.log(vm, 'if');
+            valor.parentNode.parentNode.removeChild(valor.parentNode);
+            var vm = equieliminar.children.length;
+            console.log(vm, 'end if');
+        };
+        var vm = 0;
+
+        // valor.parentNode.parentNode.removeChild(valor.parentNode);
+
+    }
+    //Eliminar Artillería Aerea
+    function eliminar_artiaerea(valor) {
+        var artieliminar = document.getElementById('aerea');
+        var vm = 0;
+        console.log(vm, 'inicio');
+        var vm = artieliminar.children.length;
+        console.log(vm, 'cuenta');
+
+        if (vm >= 2) {
+            console.log(vm, 'if');
+            valor.parentNode.parentNode.removeChild(valor.parentNode);
+            var vm = artieliminar.children.length;
+            console.log(vm, 'end if');
+        };
+        var vm = 0;
+
+        // valor.parentNode.parentNode.removeChild(valor.parentNode);
+
+    }
+
+
+    function aggCargador() {
+        var cargador = document.querySelector(".cargador");
+        var cargador_copia = cargador.cloneNode(true);
+        document.getElementById('cargadores').appendChild(cargador_copia);
+    }
+
+    function aggCartucho() {
+        var cartucho = document.querySelector(".cartucho");
+        var cartucho_copia = cartucho.cloneNode(true);
+        document.getElementById('cartuchos').appendChild(cartucho_copia);
+    }
+</script>
 @stop
 @section('contenido')
     {{-- Modal Agregar Material Entregado --}}
@@ -67,35 +195,6 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row" id="DEL-AL1" style="display: none; justify-content:end;">
-                                <div class="col-6 ">
-                                    <div class="form-group">
-                                        <label for="remitente">DEL:</label>
-                                        <select class="form-control " name="remitente" id="busqueda"></select>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group ">
-                                        <label for="destinatario">AL:</label>
-                                        <select class="form-control " name="destinatario" id="busqueda2"></select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row ml-1" id="AL-DEL2" style="display: none; justify-content:end;">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="remitente">AL:</label>
-                                        <select class="form-control  " name="remitente" id="busqueda3"></select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="destinatario">DEL:</label>
-                                        <select class="form-control " name="destinatario" id="busqueda4"></select>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="col-4">
                                 <div class="form-group">
                                     <label for="ASUNTO">TIPO DOC</label>
@@ -121,10 +220,37 @@
                                     <input type="number" name="nro_doc" class="form-control" placeholder="073">
                                 </div>
                             </div>
+                            
+                            <div class="row w-100" id="DEL-AL1" style="display: none; justify-content: center;">
+                                <div class="col-6 ">
+                                    <div class="form-group">
+                                        <label for="remitente">DEL:</label>
+                                        <select class="form-control" name="remitente" id="busqueda"></select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group ">
+                                        <label for="destinatario">AL:</label>
+                                        <select class="form-control " name="destinatario" id="busqueda2"></select>
+                                    </div>
+                                </div>
+                             </div>
+                            <div class="row"  id="AL-DEL2" style="display: none; justify-content: center;">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="remitente">AL:</label>
+                                        <select class="form-control  " name="remitente" id="busqueda3"></select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="destinatario">DEL:</label>
+                                        <select class="form-control " name="destinatario" id="busqueda4"></select>
+                                    </div>
+                                </div>
+                            </div>
 
-
-
-                        </div>
+                            </div>
 
 
 
@@ -133,7 +259,7 @@
                                 <b>Armas</b>
                             </div>
                             <div class="card-body">
-                                <div class="row form-group" id="armas">
+                                <div class="row form-group" id="armass">
                                     <div class="material row ">
                                         <div class="col-md-5 p-2 ">
                                             <select class="form-control" name="armas[]" id="armamentos"
@@ -163,11 +289,11 @@
                                         </div>
 
                                         <div class="row form-group aling-center ">
-                                            <label class="col text-center">¿Desea Asignar Accesorios?</label>
+                                            <label class="ml-2 text-center">¿Desea Asignar Accesorios?</label>
 
-                                            <select name="opciaccesorios" id="opaccesorios"
+                                            <select class="col-md-5 ml-2" name="opciaccesorios" id="opaccesorios"
                                                 onchange="acc(this.value);" style="text-transform: uppercase;">
-                                                <option selected disabled>SELECCIONE UNA OPCIÓN</option>
+                                                <option selected disabled>SELECCIONE</option>
                                                 <option value="si">Si</option>
                                                 <option value="no">No</option>
                                             </select>
@@ -175,9 +301,10 @@
                                         </div>
                                         <div class=" row form-group aling-center" id="accesorios"
                                             style="display: none; text-transform: uppercase;">
-                                            <label class="col-3 text-center">Accesorios</label>
-                                            <input type="number" name="accesorios[]" min="1" class="form-control col-3"
-                                                placeholder="1">
+                                            <label class="col-auto text-center">Accesorios</label>
+                                            <select class="col-auto ml-2" name="accesorios" id="selecaccesorios" style="text-transform: uppercase;"> 
+
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -189,19 +316,125 @@
                             </div>
                             <div class="card-body" >
                                 <div class="row form-group" id="municion">
-                                    <div class="material row " >
-                                        <div class="form-group row">
-                                            <div class="col-auto ">
+                                    <div class="clamuni row form-group" >
+                                        <div class="col-10 ">
                                                 <select class="form-control " name="muni[]" id="municions"
                                                     style=" text-transform: uppercase; width:100% !important;"
                                                     required>
                                                 </select>
                                             </div>
+                                            <a class="col-md-1" onclick="eliminar_municion(this)">
+                                                <span class="btn btn-danger"><i class="fas fa-minus"></i></span>
+                                            </a>
+                                            <a class="col-md-1 " onclick="aggMunicion();">
+                                                <span class="btn btn-primary"><i class="fas fa-plus"></i></span>
+                                            </a>
+                                    </div>                                 
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="card elevation-2" style="display: none;" id="ordenpublico">
+                            <div class="card-header text-center">
+                                <b>Orden Público</b>
+                            </div>
+                            <div class="card-body" >
+                                <div class="row form-group" id="publi">
+                                    <div class="claorden row " >
+                                        <div class="form-group row">
+                                            <div class="col-10 ">
+                                                <select class="form-control " name="ordenpublic" id="publico"
+                                                    style=" text-transform: uppercase; width:100% !important;"
+                                                    required>
+                                                </select>
+                                            </div>
+                                            <a class="col-md-1" onclick="eliminar_ordenpublico(this)">
+                                                <span class="btn btn-danger"><i class="fas fa-minus"></i></span>
+                                            </a>
+                                            <a class="col-md-1 " onclick="aggOrdenPublico();">
+                                                <span class="btn btn-primary"><i class="fas fa-plus"></i></span>
+                                            </a>
                                         </div>    
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="card elevation-2" style="display: none;" id="explosivos">
+                            <div class="card-header text-center">
+                                <b>Explosivos</b>
+                            </div>
+                            <div class="card-body" >
+                                <div class="row form-group" id="explo">
+                                    <div class="claexplo row " >
+                                        <div class="form-group row">
+                                            <div class="col-10">
+                                                <select class="form-control " name="ordenpublic[]" id="explosivo"
+                                                    style=" text-transform: uppercase; width:100% !important;"
+                                                    required>
+                                                </select>
+                                            </div>
+                                            <a class="col-md-1" onclick="eliminar_explosivos(this)">
+                                                <span class="btn btn-danger"><i class="fas fa-minus"></i></span>
+                                            </a>
+                                            <a class="col-md-1 " onclick="aggExplosivos();">
+                                                <span class="btn btn-primary"><i class="fas fa-plus"></i></span>
+                                            </a>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card elevation-2" style="display: none;" id="equipos">
+                            <div class="card-header text-center">
+                                <b>Equipos Opticos y Optrópicos</b>
+                            </div>
+                            <div class="card-body" >
+                                <div class="row form-group" id="equipo">
+                                    <div class="eopop row " >
+                                        <div class="form-group row">
+                                            <div class="col-10 ">
+                                                <select class="form-control " name="ordenpublic[]" id="optropicos"
+                                                    style=" text-transform: uppercase; width:100% !important;"
+                                                    required>
+                                                </select>
+                                            </div>
+                                            <a class="col-md-1" onclick="eliminar_equipos(this)">
+                                                <span class="btn btn-danger"><i class="fas fa-minus"></i></span>
+                                            </a>
+                                            <a class="col-md-1 " onclick="aggEquipos();">
+                                                <span class="btn btn-primary"><i class="fas fa-plus"></i></span>
+                                            </a>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card elevation-2" style="display: none;" id="artilleria">
+                            <div class="card-header text-center">
+                                <b>Artillería Aerea</b>
+                            </div>
+                            <div class="card-body" >
+                                <div class="row form-group" id="aerea">
+                                    <div class="clasartiae row " >
+                                        <div class="form-group row">
+                                            <div class="col-10 ">
+                                                <select class="form-control " name="artilleria[]" id="aarea"
+                                                    style=" text-transform: uppercase; width:100% !important;"
+                                                    required>
+                                                </select>
+                                            </div>
+                                            <a class="col-md-1" onclick="eliminar_artiaerea(this)">
+                                                <span class="btn btn-danger"><i class="fas fa-minus"></i></span>
+                                            </a>
+                                            <a class="col-md-1 " onclick="aggArtiaerea();">
+                                                <span class="btn btn-primary"><i class="fas fa-plus"></i></span>
+                                            </a>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="modal-footer row my-auto pt-3 ">
                             <div class="col-3">
                                 <button type="submit" class="btn btn-primary " id="btn-nuevo">
@@ -318,7 +551,11 @@
             if (asunto == 'armamentos') {
 
                 $('#armas').show();
-                $("#municiones").hide();
+                $('#municiones').hide();
+                $('#ordenpublico').hide();
+                $('#explosivos').hide();
+                $('#equipos').hide();
+                $('#artilleria').hide();
 
                 var urlArmamentos = "{{ url('/extras/armas') }}";
                 $.get(urlArmamentos, function(data, status) {
@@ -336,15 +573,19 @@
             } else if (asunto == 'municiones') {
                 $('#municiones').show();
                 $('#armas').hide();
+                $('#ordenpublico').hide();
+                $('#explosivos').hide();
+                $('#equipos').hide();
+                $('#artilleria').hide();
 
                 var urlMuniciones = "{{ url('/administracion/municiones') }}";
                 // console.log(urlMuniciones);
                 $.get(urlMuniciones, function(data, status) {
-                    console.log(data);
+                    // console.log(data);
                     var $el = $("#municions");
                     $el.empty(); // remove old options
                     $el.append($("<option selected disabled></option>").text(
-                        'SELECCIONE UNA MUNICION'));
+                        'SELECCIONE UNA MUNICIÓN'));
                     $.each(data, function(key, value) {
                         $el.append($("<option></option>").attr("value", value.id).text(
                             value.codigo + ' ' + value.descripcion));
@@ -353,7 +594,101 @@
                     console.log("Error");
                 });
             }
+            else if (asunto == 'ordenpublico') {
+                $('#ordenpublico').show();
+                $('#armas').hide();
+                $('#municiones').hide();
+                $('#explosivos').hide();
+                $('#equipos').hide();
+                $('#artilleria').hide();
+                var urlOrdenPublico = "{{ url('/administracion/OrdenPublico') }}";
+                console.log(urlOrdenPublico);
+                $.get(urlOrdenPublico, function(data, status) {
+                    console.log(data);
+                    var $el = $("#publico");
+                    $el.empty(); // remove old options
+                    $el.append($("<option selected disabled></option>").text(
+                        'SELECCIONE UN ORDEN PÚBLICO'));
+                    $.each(data, function(key, value) {
+                        $el.append($("<option></option>").attr("value", value.id).text(
+                             value.descripcion));
+                    });
+                }).fail(function() {
+                    console.log("Error");
+                });
+            }else if (asunto == 'explosivos') {
+                $('#explosivos').show();
+                $('#armas').hide();
+                $('#municiones').hide();
+                $('#ordenpublico').hide();
+                $('#equipos').hide();
+                $('#artilleria').hide();
+
+                var urlExplosivos = "{{ url('/administracion/explosivos') }}";
+                // console.log(urlMuniciones);
+                $.get(urlExplosivos, function(data, status) {
+                    // console.log(data);
+                    var $el = $("#explosivo");
+                    $el.empty(); // remove old options
+                    $el.append($("<option selected disabled></option>").text(
+                        'SELECCIONE UN EXPLOSIVO'));
+                    $.each(data, function(key, value) {
+                        $el.append($("<option></option>").attr("value", value.id).text(
+                             value.descripcion));
+                    });
+                }).fail(function() {
+                    console.log("Error");
+                });
+            }else if (asunto == 'equipos') {
+                $('#equipos').show();
+                $('#armas').hide();
+                $('#municiones').hide();
+                $('#ordenpublico').hide();
+                $('#explosivos').hide();
+                $('#artilleria').hide();
+                var urlEopop = "{{ url('/administracion/optronicos') }}";
+                // console.log(urlEopop);
+                $.get(urlEopop, function(data, status) {
+                    // console.log(data);
+                    var $el = $("#optropicos");
+                    $el.empty(); // remove old options
+                    $el.append($("<option selected disabled></option>").text(
+                        'SELECCIONE UN EQUIPO OPTRÓNICO U OPTRÓPICO'));
+                    $.each(data, function(key, value) {
+                        $el.append($("<option></option>").attr("value", value.nombre).text(
+                            value.cod + ' | ' + value.descripcion));
+                    });
+                }).fail(function() {
+                    console.log("Error");
+                });
+            }else if (asunto == 'artilleria') {
+               $('#artilleria').show();
+                 $('#armas').hide();
+                $('#municiones').hide();
+                $('#ordenpublico').hide();
+                $('#explosivos').hide();
+                $('#equipos').hide();
+                               
+
+                var urlArtilleriaA = "{{ url('/administracion/artilleria') }}";
+                // console.log(urlArtilleriaA);
+                $.get(urlArtilleriaA, function(data, status) {
+                    // console.log(data);
+                    var $el = $("#aarea");
+                    $el.empty(); // remove old options
+                    $el.append($("<option selected disabled></option>").text(
+                        'SELECCIONE UNA ARTILLERÍA'));
+                    $.each(data, function(key, value) {
+                        $el.append($("<option></option>").attr("value", value.id).text(
+                            value.descripcion));
+                    });
+                }).fail(function() {
+                    console.log("Error");
+                });
+            }
+            
         }
+
         function acc(opcions){
             if (opcions == 'si'){
                 $('#accesorios').show();
