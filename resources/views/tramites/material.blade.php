@@ -299,13 +299,12 @@
                                             </select>
 
                                         </div>
-                                        <div class=" row form-group aling-center" id="accesorios"
-                                            style="display: none; text-transform: uppercase;">
-                                            <label class="col-auto text-center">Accesorios</label>
-                                            <select class="col-auto ml-2" name="accesorios" id="selecaccesorios" style="text-transform: uppercase;"> 
-
-                                            </select>
-                                        </div>
+                                        <div class=" row col-4 form-group aling-center" id="accesorios"
+                                        style="display: none; text-transform: uppercase;">
+                                        <label class="ml-2 text-center">Accesorios
+                                        <select class="row col-md-12 ml-2" name="accesorios" id="selecaccesorios" style="text-transform: uppercase;"> 
+                                        </select></label>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
