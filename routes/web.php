@@ -32,6 +32,9 @@ Route::get('/administracion/optronicos', [App\Http\Controllers\OptronicosControl
 Route::get('/grado', [App\Http\Controllers\GradoMilitarController::class, 'index'])->name('grado');
 Route::get('/administracion/accesorios', [App\Http\Controllers\AccesoriosController::class, 'index'])->name('accesorios');
 Route::get('/administracion/formularioacc', [App\Http\Controllers\AccesoriosController::class, 'formulariodoc']);
+Route::get('/administracion/formulariomuni', [App\Http\Controllers\MunicionesController::class, 'formulariomuni']);
+Route::get('/administracion/formularioorden', [App\Http\Controllers\OrdenPublicosController::class, 'formularioorden']);
+Route::get('/administracion/formularioequipos', [App\Http\Controllers\OptronicosController::class, 'formularioequipos']);
 
 //Explosivos
 // Route::get('/administracion/explosivos', [App\Http\Controllers\ExplosivosController::class, 'index'])->name('/administracion/explosivos');

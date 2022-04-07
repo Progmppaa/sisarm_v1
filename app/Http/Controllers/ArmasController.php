@@ -21,15 +21,15 @@ class ArmasController extends Controller
 
     public function store(Request $request)
     {
-        $armamento->codigo = $request->get('codigo');
-        $armamento->nombre = $request->get('nombre');
-        $armamento->marca = $request->get('marca');
-        $armamento->modelo = $request->get('modelo');
-        $armamento->calibre =  $request->get('calibre');
+        // $armamento->codigo = $request->get('codigo');
+        // $armamento->nombre = $request->get('nombre');
+        // $armamento->marca = $request->get('marca');
+        // $armamento->modelo = $request->get('modelo');
+        // $armamento->calibre =  $request->get('calibre');
 
-        $armamento->save();
+        // $armamento->save();
 
-        return redirect()->action('/inventario/armas');
+        // return redirect()->action('/inventario/armas');
     
     }
 

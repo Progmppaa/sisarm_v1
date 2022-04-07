@@ -11,10 +11,16 @@ class MunicionesController extends Controller
     public function index()
     {
         $municiones = Municiones::get();
+        // return $municiones;
         return view('administracion/municiones', compact('municiones'));
-
+        
+    }
+    public function formulariomuni()
+    {
+        $municiones = Municiones::get();
         return $municiones;
     }
+    
 
     public function create()
     {
@@ -45,4 +51,5 @@ class MunicionesController extends Controller
     {
         //
     }
+
 }

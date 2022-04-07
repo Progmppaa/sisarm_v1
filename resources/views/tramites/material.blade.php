@@ -189,6 +189,10 @@
                         <div class="row text-center">
                             <div class="col-md-5">
                                 <div class="form-group">
+                                    <label for="Fecha">Fecha:</label>
+                                    <input type="date" name="fecha" class="form-control" placeholder="D/M/A">
+                                </div>
+                                <div class="form-group">
                                     <label for="ASUNTO">ASUNTO:</label>
                                     <select class=" form-control col" name="asunto" id="asuntos"
                                         onchange="mostrar(this.value)" required>
@@ -475,19 +479,17 @@
                                     {{-- <th>NRO</th>
                                     <th>FECHA</th> --}}
                                     {{-- <th>DEL</th> --}}
-                                    <th>AL</th>
+                                    <th>DEL</th>
                                     <th>ASUNTO</th>
-                                    <th>TIPO DE DOCUMENTO</th>
-                                    <th>ARMAS</th>
-                                    <th>CARTUCHOS</th>
-                                    <th>CARGADORES</th>
+                                    <th>FECHA</th>
+                                    <th>ESTATUS</th>
                                     <th>ACCIONES</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center">
                                 @foreach ($materials as $do)
                                     <tr>
-                                        {{-- <td>{{ $do->nro_doc }}</td> --}}
+                                         {{-- <td>{{ $do->nro_doc }}</td> --}}
 
                                         {{-- <td>
                                             @if ($do->remitente)
@@ -498,9 +500,8 @@
                                 @endforeach
                                 @endif
                                 </td> --}}
-
                                         <td>
-                                            @if ($do->destinatario)
+                                            @if ($do->remitente)
                                                 @foreach ($personal as $persona)
                                                     @if ($persona->id == $do->destinatario)
                                                         {{ $persona->nombres }}
@@ -510,11 +511,9 @@
                                         </td>
 
                                         <td>{{ $do->asunto }}</td>
-                                        <td>{{ $do->tipo_de_documento }}</td>
-                                        <td>{{ $do->armas }}</td>
-                                        <td>{{ $do->cartuchos }}</td>
-                                        <td>{{ $do->cargadores }}</td>
-
+                                        <td>{{ $do->fecha}}</td>
+                                        <td>{{ $do->estatus }}</td>
+                                        
                                         <td>
                                             <a href="{{ route('visualizar') }}" class="btn btn-info">
                                                 Visualizar
@@ -532,7 +531,7 @@
 @stop
 @section('scripts')
     <script>
-        function mostrar(id) {
+       function mostrar(id) {
             if (id == "DOTACIÓN ORGÁNICA" || id == "DEVOLUCIÓN" || id == "ASIGNACIÓN" || id == "REEMPLAZO") {
                 $("#DEL-AL1").show();
                 $("#AL-DEL2").hide();
@@ -577,7 +576,7 @@
                 $('#equipos').hide();
                 $('#artilleria').hide();
 
-                var urlMuniciones = "{{ url('/administracion/municiones') }}";
+                var urlMuniciones = "{{ url('/administracion/formulariomuni') }}";
                 // console.log(urlMuniciones);
                 $.get(urlMuniciones, function(data, status) {
                     // console.log(data);
@@ -600,7 +599,7 @@
                 $('#explosivos').hide();
                 $('#equipos').hide();
                 $('#artilleria').hide();
-                var urlOrdenPublico = "{{ url('/administracion/OrdenPublico') }}";
+                var urlOrdenPublico = "{{ url('/administracion/formularioorden') }}";
                 console.log(urlOrdenPublico);
                 $.get(urlOrdenPublico, function(data, status) {
                     console.log(data);
@@ -623,7 +622,7 @@
                 $('#equipos').hide();
                 $('#artilleria').hide();
 
-                var urlExplosivos = "{{ url('/administracion/explosivos') }}";
+                var urlExplosivos = "{{ url('/administracion/formularioexplo') }}";
                 // console.log(urlMuniciones);
                 $.get(urlExplosivos, function(data, status) {
                     // console.log(data);
@@ -645,7 +644,7 @@
                 $('#ordenpublico').hide();
                 $('#explosivos').hide();
                 $('#artilleria').hide();
-                var urlEopop = "{{ url('/administracion/optronicos') }}";
+                var urlEopop = "{{ url('/administracion/formularioequipos') }}";
                 // console.log(urlEopop);
                 $.get(urlEopop, function(data, status) {
                     // console.log(data);
@@ -669,7 +668,7 @@
                 $('#equipos').hide();
                                
 
-                var urlArtilleriaA = "{{ url('/administracion/artilleria') }}";
+                var urlArtilleriaA = "{{ url('/administracion/formularioartilleria') }}";
                 // console.log(urlArtilleriaA);
                 $.get(urlArtilleriaA, function(data, status) {
                     // console.log(data);

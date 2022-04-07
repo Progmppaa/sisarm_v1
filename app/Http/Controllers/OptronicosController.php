@@ -9,6 +9,14 @@ class OptronicosController extends Controller
     public function index()
     {
         $optronicos = Optronicos::get();
-        return  $optronicos;
+        return view ('/administracion/optronicos',compact('optronicos'));
     }
+
+    public function formularioequipos()
+    {
+        $optronicos = Optronicos::get();
+        return $optronicos;
+
+    }
+   
 }

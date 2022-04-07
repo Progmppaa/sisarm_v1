@@ -45,4 +45,9 @@ class AsuntoController extends Controller
     {
         //
     }
+
+    public function visualizar()
+    {
+        
+    }
 }

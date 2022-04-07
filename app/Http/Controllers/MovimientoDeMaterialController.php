@@ -29,7 +29,7 @@ class MovimientoDeMaterialController extends Controller
         $cont = 0;
         $armas = [];
         foreach ($request->armas as $arma){
-            $armas[] = ['armaz' => $arma, 'serial'=>$request->serials[$cont]];
+            $armas[] = ['armas' => $arma, 'serial'=>$request->serials[$cont]];
             $cont++;
         }
         $a = json_encode($armas);
@@ -49,6 +49,7 @@ class MovimientoDeMaterialController extends Controller
         
         $material = new MovimientoDeMaterial();
         $material->nro_doc = $request->nro_doc;
+        $material->data = $request->data;
         $material->asunto = $request->asunto;
         $material->remitente = $request->remitente;
         $material->destinatario = $request->destinatario;
