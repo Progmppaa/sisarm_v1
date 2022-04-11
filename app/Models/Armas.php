@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Armas extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'codigo',
+        'nombre',
+        'marca',
+        'modelo',
+        'calibre'
+
+    ];
+            
+            
+            
+            
+            
 }

@@ -21,15 +21,17 @@ class ArmasController extends Controller
 
     public function store(Request $request)
     {
-        // $armamento->codigo = $request->get('codigo');
-        // $armamento->nombre = $request->get('nombre');
-        // $armamento->marca = $request->get('marca');
-        // $armamento->modelo = $request->get('modelo');
-        // $armamento->calibre =  $request->get('calibre');
-
-        // $armamento->save();
-
-        // return redirect()->action('/inventario/armas');
+        request()->validate([
+            'codigo'  => 'required',
+            'nombre'  => 'required',
+            'marca'   => 'required',
+            'modelo'  => 'required',
+            'calibre' => 'required',
+        ]);
+    
+        Armas::create($request->all());
+    
+        return redirect('administracion/armamentos')->with('success', 'Su registro fue exitoso.');
     
     }
 

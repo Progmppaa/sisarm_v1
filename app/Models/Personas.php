@@ -19,6 +19,6 @@ class Personas extends Model
             'compania',
             'telefono',
             'nro_carnet',
-            'promo',
+            'promo'
     ];
 }          
