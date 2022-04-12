@@ -60,7 +60,7 @@
             </li>
             <li class="nav-item">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="/administracion/explosivos" class="nav-link">
                 <i class="fas fa-cubes nav-icon"></i>
                 <p>Explosivos</p>
               </a>

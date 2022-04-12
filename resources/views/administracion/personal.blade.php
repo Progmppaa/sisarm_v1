@@ -22,16 +22,16 @@
                         <input type="text" name="CI" class="form-control col">
                     </div>
                     <div class="form-group row">
-                        <label  class="col-3">Fecha de Nacimiento</label>
-                        <input type="text" name="Fe_nac" class="form-control col">
-                    </div>
-                    <div class="form-group row">
                         <label  class="col-3">Nombres</label>
                         <input type="text" name="nombres" class="form-control col">
                     </div>
                     <div class="form-group row">
                         <label class="col-3">Apellidos</label>
                         <input type="text" name="apellidos" class="form-control col">
+                    </div>
+                    <div class="form-group row">
+                        <label  class="col-3">Fecha de Nacimiento</label>
+                        <input type="date" name="Fe_nac" class="form-control col">
                     </div>
                     <div class="form-group row">
                         <label  class="col-3">Dependencia</label>
@@ -118,9 +118,14 @@
                                 <th>CI</th>
                                 <th>Nombres</th>
                                 <th>Apellidos</th>
+                                <th>Fecha de Nacimiento</th>
                                 <th>Dependencia</th>
+                                <th>Destacamento</th>
+                                <th>Compañía</th>
                                 <th>Grado</th>
                                 <th>Teléfono</th>
+                                <th>N° de Carnet</th>
+                                <th>Promoción</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -130,9 +135,14 @@
                                 <td>{{ $personas->CI }}</td>
                                 <td>{{ $personas->nombres }}</td>
                                 <td>{{ $personas->apellidos }}</td>
+                                <td>{{ $personas->Fe_nac }}</td>
                                 <td>{{ $personas->dependencia }}</td>
+                                <td>{{ $personas->destacamento }}</td>
+                                <td>{{ $personas->compania }}</td>
                                 <td>{{ $personas->grado }}</td>
                                 <td>{{ $personas->telefono }}</td>
+                                <td>{{ $personas->nro_carnet }}</td>
+                                <td>{{ $personas->promo }}</td>
                                 <td>
                             <a href="{{ route('personal-destroy',$personas->id) }}" class="btn bg-gradient-danger" onclick="return deleteSeg();">Borrar</a>  
                             <a href="{{ route('personal-edit',$personas->id) }}" onclick="return editSeg();" class=" btn bg-gradient-info">

@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Explosivos extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'descripcion'
+];
 }

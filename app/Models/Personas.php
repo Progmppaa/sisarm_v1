@@ -13,10 +13,10 @@ class Personas extends Model
             'nombres',
             'apellidos',
             'Fe_nac',
-            'grado',
             'dependencia',
             'destacamento',
             'compania',
+            'grado',
             'telefono',
             'nro_carnet',
             'promo'

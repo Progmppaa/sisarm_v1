@@ -194,7 +194,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="ASUNTO">ASUNTO:</label>
-                                    <select class=" form-control col" name="asunto" id="asuntos"
+                                    <select class=" form-control" name="asunto" id="asuntos"
                                         onchange="mostrar(this.value)" required>
                                     </select>
                                 </div>

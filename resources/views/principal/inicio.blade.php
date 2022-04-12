@@ -19,9 +19,14 @@
                             <span>Disponible</span>
                             <h6 ><a href="/tramites/material_de_guerra" class="text-white-50">Asignar armamento</a></h6>
                         </div>
+                        
                         <div class="col">
                             <h3>0</h3>
                             <span>Asignado</span>
+                        </div>
+                        <div class="col">
+                            <h3>0</h3>
+                            <span>Asignado Nacional</span>
                         </div>
                     </div>
                 </div>
@@ -46,6 +51,10 @@
                             <h3>0</h3>
                             <span>Asignado</span>
                         </div>
+                        <div class="col">
+                            <h3>0</h3>
+                            <span>Asignado Nacional</span>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer p-2 text-right">
@@ -67,6 +76,10 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Asignado</span>
+                        </div>
+                        <div class="col">
+                            <h3>0</h3>
+                            <span>Asignado Nacional</span>
                         </div>
                     </div>
                 </div>
@@ -91,6 +104,10 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Asignado</span>
+                        </div>
+                        <div class="col">
+                            <h3>0</h3>
+                            <span>Asignado Nacional</span>
                         </div>
                     </div>
                 </div>
@@ -118,6 +135,10 @@
                             <h3>0</h3>
                             <span>Asignado</span>
                         </div>
+                        <div class="col">
+                            <h3>0</h3>
+                            <span>Asignado Nacional</span>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer p-2 text-right">
@@ -142,6 +163,10 @@
                             <h3>0</h3>
                             <span>Asignado</span>
                         </div>
+                        <div class="col">
+                            <h3>0</h3>
+                            <span>Asignado Nacional</span>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer p-2 text-right">
@@ -165,6 +190,10 @@
                         <div class="col">
                             <h3>0</h3>
                             <span>Asignado</span>
+                        </div>
+                        <div class="col">
+                            <h3>0</h3>
+                            <span>Asignado Nacional</span>
                         </div>
                     </div>
                 </div>

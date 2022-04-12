@@ -64,6 +64,8 @@ Route::get('/administracion/armamento', [App\Http\Controllers\ArmasController::c
 Route::post('/administracion/armamento/store', [App\Http\Controllers\ArmasController::class, 'store'])->name('armamento-store');
 Route::post('/administracion/armamento/edit/{id}', [App\Http\Controllers\ArmasController::class, 'update'])->name('armamento-edit');
 Route::get('/administracion/armamento/delete/{id}', [App\Http\Controllers\ArmasController::class, 'destroy'])->name('armamento-destroy');
+// Explosivos
+Route::get('/administracion/explosivos', [App\Http\Controllers\ExplosivosController::class, 'index']);
 
 // INVENTARIOS
 // Armamento
@@ -74,20 +76,20 @@ Route::post('/inventario/armamento/delete', [App\Http\Controllers\InventarioArma
 Route::post('/Estadistica/armas', [App\Http\Controllers\InventarioArmasController::class, 'estadisArmas'])->name('estadisArmas');
 
 
-// municiones
+// Municiones
 Route::get('/inventario/municiones', [App\Http\Controllers\InventarioArmasController::class, 'index'])->name('inv-municiones');
 Route::post('/inventario/municiones/store', [App\Http\Controllers\InventarioArmasController::class, 'store'])->name('inv-municiones-store');
 Route::post('/inventario/municiones/edit', [App\Http\Controllers\InventarioArmasController::class, 'update'])->name('inv-municiones-edit');
 Route::post('/inventario/municiones/delete', [App\Http\Controllers\InventarioArmasController::class, 'destroy'])->name('inv-municiones-destroy');
 
-// Explisivos
-Route::get('/inventario/explisivos', [App\Http\Controllers\InventarioArmasController::class, 'index'])->name('inv-explosivos');
-Route::post('/inventario/explisivos/store', [App\Http\Controllers\InventarioArmasController::class, 'store'])->name('inv-explosivos-store');
-Route::post('/inventario/explisivos/edit', [App\Http\Controllers\InventarioArmasController::class, 'update'])->name('inv-explosivos-edit');
-Route::post('/inventario/explisivos/delete', [App\Http\Controllers\InventarioArmasController::class, 'destroy'])->name('inv-explosivos-destroy');
+// Explosivos
+Route::get('/inventario/explosivos', [App\Http\Controllers\InventarioArmasController::class, 'index'])->name('inv-explosivos');
+Route::post('/inventario/explosivos/store', [App\Http\Controllers\InventarioArmasController::class, 'store'])->name('inv-explosivos-store');
+Route::post('/inventario/explosivos/edit', [App\Http\Controllers\InventarioArmasController::class, 'update'])->name('inv-explosivos-edit');
+Route::post('/inventario/explosivos/delete', [App\Http\Controllers\InventarioArmasController::class, 'destroy'])->name('inv-explosivos-destroy');
 Auth::routes();
 
-//gráfica
+//Gráfica
 Route::get('/DetallesArmas', [App\Http\Controllers\GraficosController::class, 'index'])->name('Detalles-armas');
 Route::get('/graficos/DetallesArmas/{id}', [App\Http\Controllers\GraficosController::class, 'show'])->name('Detalles-armas-show');
 
