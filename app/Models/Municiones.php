@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Municiones extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'cod',
+        'descripcion'
+
+    ];
 }

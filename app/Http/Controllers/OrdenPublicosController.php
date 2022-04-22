@@ -8,7 +8,7 @@ class OrdenPublicosController extends Controller
 {
     public function index()
     {
-        $OrdenPublicos = OrdenPublico::get();
+        $OrdenPublico = OrdenPublico::get();
         return view('administracion/OrdenPublico', compact('OrdenPublico'));
     }
 
@@ -16,5 +16,17 @@ class OrdenPublicosController extends Controller
     {
         $OrdenPublicos = OrdenPublico::get();
         return $OrdenPublicos;
+    }
+
+    public function store(Request $request)
+    {
+        request()->validate([
+            'descripcion'  => 'required'
+        ]);
+    
+        OrdenPublico::create($request->all());
+    
+        return redirect('administracion/OrdenPublico')->with('success', 'Su registro fue exitoso.');
+    
     }
 }

@@ -27,10 +27,15 @@ Route::get('/administracion/personal/edit/{id}', [App\Http\Controllers\PersonasC
 Route::post('/administracion/personal/update/{id}', [App\Http\Controllers\PersonasController::class, 'update'])->name('personal-actualizar');
 Route::get('/administracion/personal/delete/{id}', [App\Http\Controllers\PersonasController::class, 'destroy'])->name('personal-destroy');
 Route::get('/administracion/OrdenPublico', [App\Http\Controllers\OrdenPublicosController::class, 'index'])->name('OrdenPublico');
+Route::post('/administracion/OrdenPublico/store', [App\Http\Controllers\OrdenPublicosController::class, 'store'])->name('OrdenPublico-store');
 Route::get('/administracion/municiones', [App\Http\Controllers\MunicionesController::class, 'index'])->name('municiones');
+Route::post('/administracion/municiones', [App\Http\Controllers\MunicionesController::class, 'store'])->name('municiones-store');
 Route::get('/administracion/optronicos', [App\Http\Controllers\OptronicosController::class, 'index'])->name('optronicos');
+Route::post('/administracion/optronicos', [App\Http\Controllers\OptronicosController::class, 'store'])->name('optronicos-store');
 Route::get('/grado', [App\Http\Controllers\GradoMilitarController::class, 'index'])->name('grado');
 Route::get('/administracion/accesorios', [App\Http\Controllers\AccesoriosController::class, 'index'])->name('accesorios');
+Route::post('/administracion/accesorios/store', [App\Http\Controllers\AccesoriosController::class, 'store'])->name('accesorios-store');
+Route::get('/administracion/accesorios/edit/{id}', [App\Http\Controllers\AccesoriosController::class, 'edit'])->name('accesorios-edit');
 Route::get('/administracion/formularioacc', [App\Http\Controllers\AccesoriosController::class, 'formulariodoc']);
 Route::get('/administracion/formulariomuni', [App\Http\Controllers\MunicionesController::class, 'formulariomuni']);
 Route::get('/administracion/formularioorden', [App\Http\Controllers\OrdenPublicosController::class, 'formularioorden']);
@@ -62,7 +67,8 @@ Route::get('/administracion/compania/delete/{id}', [App\Http\Controllers\Compani
 // Armamento
 Route::get('/administracion/armamento', [App\Http\Controllers\ArmasController::class, 'index'])->name('armamento');
 Route::post('/administracion/armamento/store', [App\Http\Controllers\ArmasController::class, 'store'])->name('armamento-store');
-Route::post('/administracion/armamento/edit/{id}', [App\Http\Controllers\ArmasController::class, 'update'])->name('armamento-edit');
+Route::get('/administracion/armamento/edit/{id}', [App\Http\Controllers\ArmasController::class, 'edit'])->name('armamento-edit');
+Route::get('/administracion/armamento/update', [App\Http\Controllers\ArmasController::class, 'update'])->name('armamento-update');
 Route::get('/administracion/armamento/delete/{id}', [App\Http\Controllers\ArmasController::class, 'destroy'])->name('armamento-destroy');
 // Explosivos
 Route::get('/administracion/explosivos', [App\Http\Controllers\ExplosivosController::class, 'index']);

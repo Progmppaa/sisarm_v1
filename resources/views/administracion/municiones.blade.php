@@ -14,7 +14,7 @@ Municiones
                 <h4 class="modal-title text-center ml-4">Ingrese Las Especificaciones De Las Municiones</h4>
             </div>
             <div class="modal-body text-center">
-                <form class="form-horizontal" role="form" method="POST" action="{{route('armamento-store')}}"enctype="multipart/form-data"  id="form-nuevo">
+                <form class="form-horizontal" role="form" method="POST" action="{{route('municiones-store')}}"enctype="multipart/form-data"  id="form-nuevo">
                     @csrf
                     <div class="form-group row">
                         <label for="titulo" class="col-3">Código</label>
@@ -70,8 +70,8 @@ Municiones
                         <tbody class="text-center">
                             @foreach ($municiones as $municione)
                             <tr>
-                                <td>{{ $municione->cod }}</td>
-                                <td>{{ $municione->descripcion }}</td>  
+                                <td>{{ $municione->cod}}</td>
+                                <td>{{ $municione->descripcion}}</td>  
                                 <td> <a class="btn btn-info" href=""><i class="fas fa-edit"></i></a> </td>
                             </tr>
                             @endforeach

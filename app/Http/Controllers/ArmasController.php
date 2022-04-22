@@ -26,7 +26,7 @@ class ArmasController extends Controller
             'nombre'  => 'required',
             'marca'   => 'required',
             'modelo'  => 'required',
-            'calibre' => 'required',
+            'calibre' => 'required'
         ]);
     
         Armas::create($request->all());
@@ -46,9 +46,25 @@ class ArmasController extends Controller
         return $armas;
     }
 
-    public function update(Request $request, Armas $armas)
+    public function edit($id)
     {
-        //
+        $armas = Armas::find($id);
+        return view('/administracion/armamentos_edit', compact('armas'));
+    }
+
+    public function update(Request $request, Armas $armamento)
+    {
+        $armamento = Armas::find($armamento);
+        $armamento->codigo = $request->codigo;
+        $armamento->nombre = $request->nombre;
+        $armamento->marca = $request->marca;
+        $armamento->modelo = $request->modelo;
+        $armamento->calibre = $request->calibre;
+
+        $armamento->save();
+
+        return redirect('/administracion/armamentos');
+
     }
 
     

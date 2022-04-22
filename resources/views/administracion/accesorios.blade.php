@@ -14,7 +14,7 @@ Accesorios
                 <h4 class="modal-title text-center ml-4">Ingrese Las Especificaciones Del Accesorio</h4>
             </div>
             <div class="modal-body text-center">
-                <form class="form-horizontal" role="form" method="POST" action="{{route('accesorios')}}"enctype="multipart/form-data"  id="form-nuevo">
+                <form class="form-horizontal" role="form" method="POST" action="{{route('accesorios-store')}}"enctype="multipart/form-data"  id="form-nuevo">
                     @csrf
                     <div class="form-group row">
                         <label for="titulo" class="col-3">Descripción</label>

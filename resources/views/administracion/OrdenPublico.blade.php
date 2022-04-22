@@ -1,6 +1,6 @@
 @extends("theme.$theme.layout")
 @section('titulo')
-    Orden Público
+    Orden Publico
 @stop
 @section('styles')
 
@@ -14,7 +14,7 @@
                 <h4 class="modal-title text-center ml-4">Ingrese Las Especificaciones Del Orden Público</h4>
             </div>
             <div class="modal-body text-center">
-                <form class="form-horizontal" role="form" method="POST" action=" " enctype="multipart/form-data"  id="form-nuevo">
+                <form class="form-horizontal" role="form" method="POST" action="{{route('OrdenPublico-store')}}" enctype="multipart/form-data"  id="form-nuevo">
                     @csrf
                     <div class="form-group row">
                         <label for="titulo" class="col-3">Descripción</label>
@@ -62,9 +62,9 @@
                             </tr>
                         </thead>
                         <tbody class="text-center">
-                            @foreach ($OrdenPublicos as $OrdenPublico)
+                            @foreach ($OrdenPublico as $OrdenPublico)
                             <tr>
-                                <td>{{ $OrdenPublico->descripcion }}</td>
+                                <td>{{ $OrdenPublico->descripcion}}</td>
                                 <td> <a class="btn btn-info" href=""><i class="fas fa-edit"></i></a> </td>
                             </tr>
                             @endforeach

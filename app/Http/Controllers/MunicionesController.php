@@ -29,7 +29,15 @@ class MunicionesController extends Controller
 
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'cod'  => 'required',
+            'descripcion'  => 'required'
+        ]);
+    
+        Municiones::create($request->all());
+    
+        return redirect('administracion/municiones')->with('success', 'Su registro fue exitoso.');
+    
     }
 
     public function show(Municiones $municiones)

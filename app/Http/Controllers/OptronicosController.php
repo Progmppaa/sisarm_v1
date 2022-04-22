@@ -19,4 +19,16 @@ class OptronicosController extends Controller
 
     }
    
+    public function store(Request $request)
+    {
+        request()->validate([
+            'cod'=>'required',
+            'descripcion'  => 'required'
+        ]);
+    
+        Optronicos::create($request->all());
+    
+        return redirect('administracion/optronicos')->with('success', 'Su registro fue exitoso.');
+    
+    }
 }

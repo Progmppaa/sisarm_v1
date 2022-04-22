@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Optronicos extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'cod',
+        'descripcion'
+    ];
 }

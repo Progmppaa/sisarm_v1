@@ -14,7 +14,7 @@
                 <h4 class="modal-title text-center ml-4">Ingrese Las Especificaciones Del Optrónicos</h4>
             </div>
             <div class="modal-body text-center">
-                <form class="form-horizontal" role="form" method="POST" action=" " enctype="multipart/form-data"  id="form-nuevo">
+                <form class="form-horizontal" role="form" method="POST" action="{{route('optronicos-store')}}" enctype="multipart/form-data"  id="form-nuevo">
                     @csrf
                     <div class="form-group row">
                         <label for="titulo" class="col-3">Código</label>
