@@ -89,7 +89,7 @@
                                 <td>{{ $armamento->marca }}</td>
                                 <td>{{ $armamento->modelo }}</td>
                                 <td>{{ $armamento->calibre }}</td>
-                                <td> <a class="btn btn-info" href="">Editar</a> </td>
+                                <td> <a class="btn btn-info" href=""> <i class="fas fa-edit"></i></a> </td>
                             </tr>
                             @endforeach
                         </tbody>

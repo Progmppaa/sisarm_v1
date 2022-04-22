@@ -40,7 +40,7 @@
             </li>
             <li class="nav-item">
               <a href="{{ route('dependencias') }}" class="nav-link">
-                <i class="fas fa-map nav-icon"></i>
+              <i class="fas fa-sitemap"></i>
                 <p>Dependencias</p>
               </a>
             </li>
@@ -54,48 +54,48 @@
             <li class="nav-item">
             <li class="nav-item">
               <a href="{{ route('municiones') }}" class="nav-link">
-                <i class="fab fa-gripfire nav-icon"></i>
+              <i class="fas fa-air-freshener"></i>
                 <p>Municiones</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="/administracion/explosivos" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-bomb"></i>
                 <p>Explosivos</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="{{ route('OrdenPublico') }}" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-shuttle-van"></i>
                 <p>Orden Público</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="{{ route('optronicos') }}" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-dumpster-fire"></i>
                 <p>Equipos Ópticos y Optrónicos</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-parachute-box"></i>
                 <p>Artillerías Aereas</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="{{ route('parametros') }}" class="nav-link">
-                <i class="fa-solid fa-wifi-weak"></i>
+              <i class="fas fa-list-ol"></i>
                 <p>Parámetros</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('accesorios') }}" class="nav-link">
-                <i class="fas fa-user nav-icon"></i>
+              <i class="fas fa-diagnoses"></i>
                 <p>Accesorios</p>
               </a>
             </li>
@@ -114,40 +114,40 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="{{ route('inv-armamento') }}" class="nav-link">
-                <i class="fas fa-boxes nav-icon"></i>
+              <i class="fab fa-gripfire nav-icon"></i>
                 <p>Armas</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('inv-municiones') }}" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-air-freshener"></i>
                 <p>Municiones</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('inv-explosivos') }}" class="nav-link">
-                <i class="fas fa-box nav-icon"></i>
+              <i class="fas fa-bomb"></i>
                 <p>Explosivos</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-shuttle-van"></i>
                 <p>Orden Público</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-dumpster-fire"></i>
                 <p>Equipos Ópticos y Optrónicos</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-parachute-box"></i>
                 <p>Artillerías Aereas</p>
               </a>
             </li>
@@ -164,40 +164,40 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-boxes nav-icon"></i>
+              <i class="fab fa-gripfire nav-icon"></i>
                 <p>Armas</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-air-freshener"></i>
                 <p>Municiones</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="" class="nav-link">
-                <i class="fas fa-box nav-icon"></i>
+              <i class="fas fa-bomb"></i>
                 <p>Explosivos</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-shuttle-van"></i>
                 <p>Orden Público</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-dumpster-fire"></i>
                 <p>Equipos Ópticos y Optrónicos</p>
               </a>
             </li>
             <li class="nav-item">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-cubes nav-icon"></i>
+              <i class="fas fa-parachute-box"></i>
                 <p>Artillerías Aereas</p>
               </a>
             </li>
@@ -215,14 +215,15 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="{{ route('material') }}" class="nav-link">
-                <i class="fas fa-people-carry nav-icon"></i>
-                <p>Asignación Personal</p>
+              <i class="fas fa-id-card"></i>
+              <!-- <i class="fas fa-user-plus"></i> -->
+                <p>Asignación de Materiales al Personal</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('dependencias') }}" class="nav-link">
-                <i class="fas fa-people-carry nav-icon"></i>
-                <p>Asignación Dependencia</p>
+              <i class="fas fa-sitemap"></i>
+                <p>Asignación de Dependencia</p>
               </a>
             </li>
             <li class="nav-item">

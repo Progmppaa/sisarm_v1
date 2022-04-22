@@ -28,5 +28,6 @@ class DatabaseSeeder extends Seeder
         $this->call(GradoMilitarSeeder::class);
         $this->call(ParametrosSeeder::class);
         $this->call(AsuntoSeeder::class);
+        $this->call(CompaniaSeeder::class);
     }
 }

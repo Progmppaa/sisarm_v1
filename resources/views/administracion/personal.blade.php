@@ -144,9 +144,10 @@
                                 <td>{{ $personas->nro_carnet }}</td>
                                 <td>{{ $personas->promo }}</td>
                                 <td>
-                            <a href="{{ route('personal-destroy',$personas->id) }}" class="btn bg-gradient-danger" onclick="return deleteSeg();">Borrar</a>  
+                            <a href="{{ route('personal-destroy',$personas->id) }}" class="btn bg-gradient-danger" onclick="return deleteSeg();"><i class="fas fa-user-minus"></i>
+</a>  
                             <a href="{{ route('personal-edit',$personas->id) }}" onclick="return editSeg();" class=" btn bg-gradient-info">
-                            Editar
+                            <i class="fas fa-user-edit"></i>
                             </a>                                  
                             </td>
                             </tr>

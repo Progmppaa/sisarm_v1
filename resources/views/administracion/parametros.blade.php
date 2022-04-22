@@ -46,7 +46,7 @@
 
                                 <td>
                             <a href="{{ route('parametros_edit',$parametro->id) }}" onclick="return editSeg();" class=" btn btn-info">
-                            Actualizar
+                            <i class="fas fa-edit"></i>
                             </a>
                             
                             </td>
@@ -101,7 +101,7 @@
 
                                 {{-- <td>
                             <a href="{{ route('parametros_edit',$parametro->id) }}" onclick="return editSeg();" class=" btn btn-info">
-                            Actualizar
+                            <i class="fas fa-edit"></i>
                             </a>
                             
                             </td>
@@ -156,7 +156,7 @@
 
                                 {{-- <td>
                             <a href="{{ route('parametros_edit',$parametro->id) }}" onclick="return editSeg();" class=" btn btn-info">
-                            Actualizar
+                            <i class="fas fa-edit"></i>
                             </a>
                             
                             </td>
@@ -211,7 +211,7 @@
 
                                 {{-- <td>
                             <a href="{{ route('parametros_edit',$parametro->id) }}" onclick="return editSeg();" class=" btn btn-info">
-                            Actualizar
+                            <i class="fas fa-edit"></i>
                             </a>
                             
                             </td>
@@ -266,7 +266,7 @@
 
                                 {{-- <td>
                             <a href="{{ route('parametros_edit',$parametro->id) }}" onclick="return editSeg();" class=" btn btn-info">
-                            Actualizar
+                            <i class="fas fa-edit"></i>
                             </a>
                             
                             </td>
@@ -321,7 +321,7 @@
 
                                 {{-- <td>
                             <a href="{{ route('parametros_edit',$parametro->id) }}" onclick="return editSeg();" class=" btn btn-info">
-                            Actualizar
+                            <i class="fas fa-edit"></i>
                             </a>
                             
                             </td>

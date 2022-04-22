@@ -71,7 +71,7 @@
                             <tr>
                                 <td>{{ $optronico->cod}}</td>
                                 <td>{{ $optronico->descripcion }}</td>
-                                <td> <a class="btn btn-info" href="">Editar</a> </td>
+                                <td> <a class="btn btn-info" href=""><i class="fas fa-edit"></i></a> </td>
 
                             </tr>
                             @endforeach

@@ -65,7 +65,7 @@
                             @foreach ($OrdenPublicos as $OrdenPublico)
                             <tr>
                                 <td>{{ $OrdenPublico->descripcion }}</td>
-                                <td> <a class="btn btn-info" href="">Editar</a> </td>
+                                <td> <a class="btn btn-info" href=""><i class="fas fa-edit"></i></a> </td>
                             </tr>
                             @endforeach
                         </tbody>
