@@ -68,7 +68,7 @@ Route::get('/administracion/compania/delete/{id}', [App\Http\Controllers\Compani
 Route::get('/administracion/armamento', [App\Http\Controllers\ArmasController::class, 'index'])->name('armamento');
 Route::post('/administracion/armamento/store', [App\Http\Controllers\ArmasController::class, 'store'])->name('armamento-store');
 Route::get('/administracion/armamento/edit/{id}', [App\Http\Controllers\ArmasController::class, 'edit'])->name('armamento-edit');
-Route::get('/administracion/armamento/update', [App\Http\Controllers\ArmasController::class, 'update'])->name('armamento-update');
+Route::put('/administracion/armamento/update/{id}', [App\Http\Controllers\ArmasController::class, 'update'])->name('armamento-update');
 Route::get('/administracion/armamento/delete/{id}', [App\Http\Controllers\ArmasController::class, 'destroy'])->name('armamento-destroy');
 // Explosivos
 Route::get('/administracion/explosivos', [App\Http\Controllers\ExplosivosController::class, 'index']);

@@ -10,8 +10,9 @@ Armamentos Editar
 
     <div class="row card  shadow p-3 mb-5 rounded" style="background: rgb(235, 235, 235)">
         <div class="col-12">
-            <form class="form-horizontal pt-5" method="GET" style="margin-left:10%" action="{{ route('armamento') }}" enctype="multipart/form-data">
+            <form class="form-horizontal pt-5" method="POST" style="margin-left:10%" action="{{ route('armamento-update', $armas->id) }}" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="form-group row">
                     <label for="titulo" class="col-3">Código</label>
                     <input type="text" name="codigo" class="form-control col" value="{{$armas->codigo}}">
@@ -35,9 +36,9 @@ Armamentos Editar
                 <div class="container-fluid ">
                     <div class="row w-100 align-items-center">
                         <div class="col text-center pb-5">
-                            <button class="btn bg-gradient-info" type="submit" a href="{{ route('armamento-update') }}">Actualizar</button>
+                            <button class="btn bg-gradient-info" type="submit">Actualizar</button>
                             <input class="btn bg-info ml-2" type="reset" value="Limpiar">
-                            <a href="{{ route('armamento-update') }}" class="btn bg-gradient-danger ml-2" type="submit">Cancelar</a>
+                            <a href="{{ route('armamento') }}" class="btn bg-gradient-danger ml-2" type="submit">Cancelar</a>
                         </div>
                     </div>
                 </div>

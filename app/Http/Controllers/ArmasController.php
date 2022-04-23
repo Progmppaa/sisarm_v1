@@ -61,7 +61,7 @@ class ArmasController extends Controller
         $armamento->modelo = $request->modelo;
         $armamento->calibre = $request->calibre;
 
-        $armamento->save();
+        $armamento->update($armamento);
 
         return redirect('/administracion/armamentos');
 
